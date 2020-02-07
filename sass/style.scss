@@ -1,0 +1,89 @@
+/*General*/
+
+$body-color-dark: rgb(133, 133, 133);
+$body-color-light: rgb(255, 255, 255);
+$header-color: rgb(60, 184, 255);
+$font-color-light: rgb(255, 255, 255);
+$font-color-dark: rgb(6, 58, 126);
+
+
+// /*Global*/
+
+// *, *::before, *::after {
+//   box-sizing: border-box;
+// }
+
+
+// body {
+//     background: rgb(173, 173, 173);
+// }
+// .container {
+//   max-width: 700px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
+
+// /*Navigation*/
+
+// .navbar {
+//   background: $body-color-dark;
+//   padding: 5px 20px;
+// }
+// ul {
+//     list-style-type: none;
+//     a {
+//         text-decoration: none;
+//         color: $font-color-light;
+//         text-transform: uppercase;
+//     }
+//     a:hover {
+//         text-decoration: underline;
+//     }
+// }
+// .menu li {
+//     font-size: 16px;
+//     padding: 15px 5px;
+//     a {
+//         display: block;
+//     }
+// }
+// .logo a {
+//     font-size: 20px;
+// }
+
+// /*Mobile*/
+
+// .menu {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+// .toggle {
+//     cursor: pointer;
+//     order: 1;
+// }
+
+// .bars {
+//     background: $body-color-light;
+//     display: inline-block;
+//     height: 2px;
+//     position: relative;
+//     width: 18px;
+// }
+// .bars::before, .bars::after {
+//     background: $body-color-light;
+//     content: '';
+//     display: inline-block;
+//     height: 2px;
+//     position: absolute;
+//     width: 18px;
+// }
+// .bars::before {
+//     top: 5px;
+// }
+// .bars::after {
+//     top: -5px;
+// }
+
