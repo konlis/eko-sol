@@ -2,11 +2,14 @@
 
 $body-color-dark: rgb(133, 133, 133);
 $body-color-light: rgb(255, 255, 255);
+$navi-color: rgb(41, 128, 185);
 $header-color: rgb(60, 184, 255);
 $font-color-light: rgb(255, 255, 255);
 $font-color-dark: rgb(6, 58, 126);
-
-
+$font-logo: 'Exo', sans-serif;
+$font-body: 'Montserrat', sans-serif;
+$font-h: 'Open Sans', sans-serif;
+ 
 // /*Global*/
 
 // *, *::before, *::after {
@@ -87,3 +90,30 @@ $font-color-dark: rgb(6, 58, 126);
 //     top: -5px;
 // }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+    background: $font-color-light;
+    font-family: $font-body;
+}
+.container {
+    display: flex;
+}
+.row {
+    align-items: center;
+    justify-content: center;
+}
+
+/*Navigation*/
+.navbar {
+    background-color: $navi-color;
+}
+/*Logo*/
+.logo h1 {
+    font-family: $font-logo;
+}
+.fas, .fab {
+    font-size: 50px;
+}

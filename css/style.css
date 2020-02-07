@@ -1,2 +1,36 @@
 /*General*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row {
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/*Navigation*/
+.navbar {
+  background-color: #2980b9;
+}
+
+/*Logo*/
+.logo h1 {
+  font-family: "Exo", sans-serif;
+}
+
+.fas, .fab {
+  font-size: 50px;
+}
 /*# sourceMappingURL=style.css.map */

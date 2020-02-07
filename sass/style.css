@@ -4,67 +4,23 @@
   box-sizing: border-box;
 }
 body {
-  background: #adadad;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 .container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 20px;
+  display: flex;
+}
+.row {
+  align-items: center;
+  justify-content: center;
 }
 .navbar {
-  background: #858585;
-  padding: 5px 20px;
+  background-color: #2980b9;
 }
-ul {
-  list-style-type: none;
+.logo h1 {
+  font-family: "Exo", sans-serif;
 }
-ul a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-}
-ul a:hover {
-  text-decoration: underline;
-}
-.menu li {
-  font-size: 16px;
-  padding: 15px 5px;
-}
-.menu li a {
-  display: block;
-}
-.logo a {
-  font-size: 20px;
-}
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.toggle {
-  cursor: pointer;
-  order: 1;
-}
-.bars {
-  background: #fff;
-  display: inline-block;
-  height: 2px;
-  position: relative;
-  width: 18px;
-}
-.bars::before,
-.bars::after {
-  background: #fff;
-  content: "";
-  display: inline-block;
-  height: 2px;
-  position: absolute;
-  width: 18px;
-}
-.bars::before {
-  top: 5px;
-}
-.bars::after {
-  top: -5px;
+.fas,
+.fab {
+  font-size: 50px;
 }
