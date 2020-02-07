@@ -1,9 +1,10 @@
 /*General*/
 
-$body-color-dark: rgb(133, 133, 133);
+$body-color-dark: rgba(52, 73, 94,1.0);
 $body-color-light: rgb(255, 255, 255);
 $navi-color: rgb(41, 128, 185);
 $header-color: rgb(60, 184, 255);
+$icon-color: rgba(46, 204, 113,1.0);
 $font-color-light: rgb(255, 255, 255);
 $font-color-dark: rgb(6, 58, 126);
 $font-logo: 'Exo', sans-serif;
@@ -95,11 +96,15 @@ $font-h: 'Open Sans', sans-serif;
 }
 
 body {
-    background: $font-color-light;
+    background: $body-color-dark;
     font-family: $font-body;
+    color: $font-color-light;
 }
 .container {
     display: flex;
+    padding: 50px 0;
+       align-items: center;
+    justify-content: center;
 }
 .row {
     align-items: center;
@@ -114,6 +119,26 @@ body {
 .logo h1 {
     font-family: $font-logo;
 }
+.icon p {
+    font-size: 25px;
+    color: $navi-color;
+    font-weight: 600;
+}
 .fas, .fab {
     font-size: 50px;
+    color: $icon-color;
+    padding-right: 10px;;
+}
+.contact {
+    align-items: space-between;
+    padding: 0 20px;
+}
+.contact h5 {
+    font-size: 20px;
+}
+
+/*Carousel*/
+
+.carousel-inner img {
+    object-fit: cover;
 }

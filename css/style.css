@@ -4,13 +4,19 @@
 }
 
 body {
-  background: white;
+  background: #34495e;
   font-family: "Montserrat", sans-serif;
+  color: white;
 }
 
 .container {
   display: -ms-flexbox;
   display: flex;
+  padding: 50px 0;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .row {
@@ -30,7 +36,31 @@ body {
   font-family: "Exo", sans-serif;
 }
 
+.icon p {
+  font-size: 25px;
+  color: #2980b9;
+  font-weight: 600;
+}
+
 .fas, .fab {
   font-size: 50px;
+  color: #2ecc71;
+  padding-right: 10px;
+}
+
+.contact {
+  -ms-flex-align: space-between;
+      align-items: space-between;
+  padding: 0 20px;
+}
+
+.contact h5 {
+  font-size: 20px;
+}
+
+/*Carousel*/
+.carousel-inner img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
