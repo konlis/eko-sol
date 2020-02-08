@@ -1,10 +1,12 @@
 /*General*/
 
-$body-color-dark: rgba(52, 73, 94,1.0);
-$body-color-light: rgb(255, 255, 255);
-$navi-color: rgb(41, 128, 185);
+$body-color-orange: rgb(243, 156, 18);
+$body-color-blue: rgb(41, 128, 185);
+$body-color-green: rgb(39, 174, 96);
+$body-color-dark: rgba(44, 62, 80,1.0);
+$navi-color: rgba(44, 62, 80,1.0);
 $header-color: rgb(60, 184, 255);
-$icon-color: rgba(46, 204, 113,1.0);
+$icon-color: rgb(46, 204, 113);
 $font-color-light: rgb(255, 255, 255);
 $font-color-dark: rgb(6, 58, 126);
 $font-logo: 'Exo', sans-serif;
@@ -13,90 +15,12 @@ $font-h: 'Open Sans', sans-serif;
  
 // /*Global*/
 
-// *, *::before, *::after {
-//   box-sizing: border-box;
-// }
-
-
-// body {
-//     background: rgb(173, 173, 173);
-// }
-// .container {
-//   max-width: 700px;
-//   margin: 0 auto;
-//   padding: 0 20px;
-// }
-
-// /*Navigation*/
-
-// .navbar {
-//   background: $body-color-dark;
-//   padding: 5px 20px;
-// }
-// ul {
-//     list-style-type: none;
-//     a {
-//         text-decoration: none;
-//         color: $font-color-light;
-//         text-transform: uppercase;
-//     }
-//     a:hover {
-//         text-decoration: underline;
-//     }
-// }
-// .menu li {
-//     font-size: 16px;
-//     padding: 15px 5px;
-//     a {
-//         display: block;
-//     }
-// }
-// .logo a {
-//     font-size: 20px;
-// }
-
-// /*Mobile*/
-
-// .menu {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     align-items: center;
-// }
-
-// .toggle {
-//     cursor: pointer;
-//     order: 1;
-// }
-
-// .bars {
-//     background: $body-color-light;
-//     display: inline-block;
-//     height: 2px;
-//     position: relative;
-//     width: 18px;
-// }
-// .bars::before, .bars::after {
-//     background: $body-color-light;
-//     content: '';
-//     display: inline-block;
-//     height: 2px;
-//     position: absolute;
-//     width: 18px;
-// }
-// .bars::before {
-//     top: 5px;
-// }
-// .bars::after {
-//     top: -5px;
-// }
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
-    background: $body-color-dark;
+    background: $body-color-orange;
     font-family: $font-body;
     color: $font-color-light;
 }
@@ -151,11 +75,14 @@ body {
 
 /*Cards*/
 .cards {
-    background-color: $body-color-light;
+    background-color: $font-color-light;
 }
 .card {
     background-color: $navi-color;
 }
 card img {
     object-fit: cover;
+}
+.second {
+    align-items: flex-start;
 }
