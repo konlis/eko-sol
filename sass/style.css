@@ -11,8 +11,10 @@ body {
 .container {
   display: flex;
   padding: 50px 0;
+  justify-content: space-between;
+}
+.layout {
   align-items: center;
-  justify-content: center;
 }
 .row {
   align-items: center;
@@ -42,6 +44,19 @@ body {
 .contact h5 {
   font-size: 20px;
 }
-.carousel-inner img {
+.carousel-inner {
+  max-height: 30%;
+}
+.carosuel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+.cards {
+  background-color: #fff;
+}
+.card {
+  background-color: #2980b9;
+}
+card img {
   object-fit: cover;
 }
