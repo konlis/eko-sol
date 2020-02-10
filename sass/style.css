@@ -63,4 +63,20 @@ body {
 }
 .card {
   background-color: #2c3e50;
+  padding: 0;
+}
+.text-on-image {
+  position: relative;
+}
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+}
+.calc {
+  height: 20vh;
+  min-width: 100vw;
+  object-fit: cover;
 }
