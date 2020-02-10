@@ -1,10 +1,11 @@
 /*General*/
 
 $body-color-orange: rgb(243, 156, 18);
+$body-color-light: rgba(236, 240, 241,1.0);
 $body-color-blue: rgb(41, 128, 185);
 $body-color-green: rgb(39, 174, 96);
 $body-color-dark: rgba(44, 62, 80,1.0);
-$navi-color: rgba(44, 62, 80,1.0);
+$navi-color: rgba(243, 156, 18,1.0);
 $header-color: rgb(60, 184, 255);
 $icon-color: rgb(46, 204, 113);
 $font-color-light: rgb(255, 255, 255);
@@ -20,14 +21,25 @@ $font-h: 'Open Sans', sans-serif;
 }
 
 body {
-    background: $body-color-orange;
+    background: $body-color-light;
     font-family: $font-body;
     color: $font-color-light;
+}
+h1 {
+    font-family: $font-h;
+}
+img:hover {
+    transform: scale(1.1);
+    transition: ease-in .2s;
+}
+.under-nav {
+    background-color: $body-color-blue;
 }
 .layout {
      align-items: center;
      justify-content: space-between;
      padding: 50px 0;
+     background-color: $body-color-blue;
 }
 .row {
     align-items: center;
@@ -88,11 +100,11 @@ body {
 .card {
     background-color: $navi-color;
     padding: 0;
-    
 }
 
 .text-on-image {
     position: relative;
+    overflow: hidden;
 }
 .text-overlay {
     position: absolute;

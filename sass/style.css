@@ -4,27 +4,38 @@
   box-sizing: border-box;
 }
 body {
-  background: #f39c12;
+  background: #ecf0f1;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+}
+h1 {
+  font-family: "Open Sans", sans-serif;
+}
+img:hover {
+  transform: scale(1.1);
+  transition: ease-in 0.2s;
+}
+.under-nav {
+  background-color: #2980b9;
 }
 .layout {
   align-items: center;
   justify-content: space-between;
   padding: 50px 0;
+  background-color: #2980b9;
 }
 .row {
   align-items: center;
 }
 .navbar {
-  background-color: #2c3e50;
+  background-color: #f39c12;
 }
 .logo h1 {
   font-family: "Exo", sans-serif;
 }
 .icon p {
   font-size: 25px;
-  color: #2c3e50;
+  color: #f39c12;
   font-weight: 600;
 }
 .fas,
@@ -62,11 +73,12 @@ body {
   }
 }
 .card {
-  background-color: #2c3e50;
+  background-color: #f39c12;
   padding: 0;
 }
 .text-on-image {
   position: relative;
+  overflow: hidden;
 }
 .text-overlay {
   position: absolute;
