@@ -174,5 +174,13 @@ img:hover {
     background-color: rgba(211, 84, 0, 0.50);
     img {
         opacity: 0.5;
+        height: 100%;
+        object-fit: cover;
     }
+}
+.form-container {
+    background-color: white;
+}
+.form-card {
+    background-color: white;
 }

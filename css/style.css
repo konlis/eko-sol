@@ -180,5 +180,16 @@ img:hover {
 
 .contact-row img {
   opacity: 0.5;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.form-container {
+  background-color: white;
+}
+
+.form-card {
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */
