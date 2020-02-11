@@ -172,4 +172,13 @@ img:hover {
   top: 0;
   transform: rotateZ(180deg);
 }
+
+/*Contact*/
+.contact-row {
+  background-color: rgba(211, 84, 0, 0.5);
+}
+
+.contact-row img {
+  opacity: 0.5;
+}
 /*# sourceMappingURL=style.css.map */

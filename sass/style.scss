@@ -168,3 +168,11 @@ img:hover {
     top: 0;
     transform: rotateZ(180deg);
 }
+
+/*Contact*/
+.contact-row {
+    background-color: rgba(211, 84, 0, 0.50);
+    img {
+        opacity: 0.5;
+    }
+}
