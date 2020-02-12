@@ -49,13 +49,15 @@
         <div class='under-nav'>
             <div class='container d-md-flex layout'>
                 <div class='row col-md-6'>
-                    <div class='logo d-flex'>
+                    <div class='logo d-flex link'>
+                        <a href="#home">
                         <div class='icon'>
                             <i class="fas fa-solar-panel"></i>
                         </div>
                         <div>
                             <h1>EKO-SOL</h1>
                         </div>
+                        </a>
                     </div>
                 </div>
                 <div class='row col-md-6'>
@@ -81,21 +83,21 @@
         </div>
     </header>
     <div id='pages'>
-        <section id='home'>
+        <section id='home' class='active'>
             <div class='slider container col-12 justify-content-center'>
                 <div class='row justify-content-center'>
                     <h1>Instalacje OZE</h1>
                 </div>
                 <div class='row col-md-8  '>
                     <div class="card">
-                        <div class='text-on-image'>
-                            <a href="#"><img src="https://cdn.pixabay.com/photo/2012/03/03/23/11/alternative-21581_960_720.jpg"
+                        <div class='text-on-image link'>
+                            <a href="#foto"><img src="https://cdn.pixabay.com/photo/2012/03/03/23/11/alternative-21581_960_720.jpg"
                                 class="card-img-top" alt="photovotlt"></a>
                             <h5 class='text-overlay'>Fotowoltaika</h5>
                         </div>
-                        <div class="m-2 text-uppercase">
+                        <div class="m-2 text-uppercase link">
                             <p class='m-2'>komleksowy montaż, sprzedaż i serwis</p>
-                            <a href="#"></a>
+                            <a href="#foto"></a>
                         </div>
                     </div>
                 </div>
@@ -194,46 +196,6 @@
                 </div>
             </div>
         </section>
-    <footer class='bg-dark py-5'>
-        <div class='container d-flex justify-content-around'>
-            <div class='row flex-column'>
-                <div>
-                    <h3>Informacje</h3>
-                </div>
-                <ul class="nav navbar-dark flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Kalkulator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">RODO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Polityka prywatności</a>
-                    </li>
-                </ul>
-            </div>
-            <div class='row'>
-            </div>
-            <div class='row'>
-                <div class='footer-contact'>
-                    <h3>Kontakt</h3>
-                    <h6>EKO-SOL</h6>
-                    <h6>ul. Fabryczna 11</h6>
-                    <h6>36-044 Rzeszów</h6>
-                    <i class="fas fa-envelope">
-                        <h6>bartosz.jurys@eko-sol.pl</h6>
-                    </i>
-                </div>
-            </div>
-        </div>
-        <div class='container'>
-            <div class='row'>
-                <i class="fab fa-facebook"></i>
-            </div>
-            <h6>@2020 Copyright EKO-SOL</h6>
-        </div>
-    </footer>
-
         <section id='about'>
             <div class='container'>
                 <div class='row flex-column'>
@@ -518,9 +480,9 @@
         </section>
         <section id='contact'>
             <div class='container form-container col-12'>
-                <div class='row '>
-                    <div class='card-deck d-md-flex'>
-                        <div class='card contact-row'>
+                <div class='row'>
+                    <div class='card-deck mt-5 col-12 d-md-flex'>
+                        <div class='card  contact-row'>
                             <img src='https://cdn.pixabay.com/photo/2012/02/23/09/11/call-15924_960_720.jpg' class='card-img'>
                             <div class='card-img-overlay'>
                                 <div>
@@ -546,47 +508,90 @@
                                 </div>
                             </div>
                         </div>
-                        <div class='card form-card'>
+                        <div class='card  form-card'>
                             <h1 class='title-text'>
                                 Skontaktuj sie z nami
                             </h1>
-                            <form>
+                            <form action="https://formspree.io/xzbrygzg" method="POST">
                                 <div class="form-group">
                                     <label for="input-name">Imię i nazwisko</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="text" class="form-control" name='Pan/Pani' id="input-name" aria-describedby="emailHelp" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="input-city">Miejscowość</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <input type="text" class="form-control" name='Miejscowość' id="input-city">
                                 </div>
                                 <div class="form-group">
                                     <label for="input-phone">Numer telefonu</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <input type="text" class="form-control" name='Telefon' id="input-phone">
                                 </div>
                                 <div class="form-group">
                                     <label for="input-email">Email</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="email" class="form-control" name='Email' id="input-email" aria-describedby="emailHelp" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="input-text">Wiadomość</label>
-                                    <input type="text-area" class="form-control" id="exampleInputPassword1">
+                                    <textarea type="text" class="form-control" name='Wiadomość' id="input-text" required></textarea>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Zgadzam się z <a href=''>Polityką Przetwarzania danych
-                                            osobowych</a></label>
+                                    <input type="checkbox" class="form-check-input" name='Zgoda' id="exampleCheck1" required>
+                                    <label class="form-check-label" for="exampleCheck1">
+                                        Zgadzam się z <a href=''>Polityką Przetwarzania danych osobowych</a>
+                                    </label>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Wyślij</button>
                             </form>
                         </div>
                     </div>
                 </div>    
-                <div class='row col-12'>
-
+                <div class='row mt-5'>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453.0116109175414!2d22.00380913994002!3d50.03719964608613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfb020eb411ed%3A0x9fcba4cfab5842a!2sRynek!5e0!3m2!1spl!2spl!4v1581456060694!5m2!1spl!2spl"
+                        width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="">
+                    </iframe>
                 </div>
             </div>
         </section>
     </div>
+        <footer class='bg-dark py-5'>
+            <div class='container d-flex justify-content-around'>
+                <div class='row flex-column'>
+                    <div>
+                        <h3>Informacje</h3>
+                    </div>
+                    <ul class="nav navbar-dark flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#calc">Kalkulator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#rodo">RODO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#privacy">Polityka prywatności</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='row'>
+                </div>
+                <div class='row'>
+                    <div class='footer-contact'>
+                        <h3>Kontakt</h3>
+                        <h6>EKO-SOL</h6>
+                        <h6>ul. Fabryczna 11</h6>
+                        <h6>36-044 Rzeszów</h6>
+                        <i class="fas fa-envelope">
+                            <h6>bartosz.jurys@eko-sol.pl</h6>
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class='container'>
+                <div class='row'>
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <h6>@2020 Copyright EKO-SOL</h6>
+            </div>
+        </footer>
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

@@ -1,4 +1,12 @@
 /*General*/
+#pages > * {
+  display: none;
+}
+
+#pages > .active {
+  display: block;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -185,11 +193,11 @@ img:hover {
      object-fit: cover;
 }
 
-.form-container {
+.form-container, .form-card {
   background-color: white;
 }
 
-.form-card {
-  background-color: white;
+iframe {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

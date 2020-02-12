@@ -17,6 +17,16 @@ $font-h: 'Open Sans', sans-serif;
  
 // /*Global*/
 
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -178,9 +188,10 @@ img:hover {
         object-fit: cover;
     }
 }
-.form-container {
+.form-container, .form-card {
     background-color: white;
 }
-.form-card {
-    background-color: white;
+ 
+iframe {
+    width: 100%;
 }

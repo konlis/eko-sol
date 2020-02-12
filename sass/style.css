@@ -1,3 +1,9 @@
+#pages > * {
+  display: none;
+}
+#pages > .active {
+  display: block;
+}
 *,
 *::before,
 *::after {
@@ -146,9 +152,10 @@ img:hover {
   height: 100%;
   object-fit: cover;
 }
-.form-container {
-  background-color: white;
-}
+.form-container,
 .form-card {
   background-color: white;
+}
+iframe {
+  width: 100%;
 }
