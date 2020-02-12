@@ -1,3 +1,6 @@
+
+/*Change pages without reloading*/
+
 function changePages () {
 
     this.pages = Array.from(document.querySelector('#pages').children);
@@ -57,3 +60,4 @@ function activatePage (pageId) {
 }
 
 changePages();
+

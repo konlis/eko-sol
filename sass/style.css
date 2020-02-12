@@ -63,27 +63,25 @@ img:hover {
 .contact h5 {
   font-size: 20px;
 }
-.slider {
-  background-color: rgba(0, 0, 0, 0.61) !important;
-  background-image: url("https://cdn.pixabay.com/photo/2017/09/12/13/21/photovoltaic-system-2742302_960_720.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: color;
-  height: 100%;
-  animation: fade 15s ease-in-out 3s infinite;
-  overflow: hidden;
-  transition: ease-out 5s;
+.card-header {
+  background-color: rgba(0, 0, 0, 0.603) !important;
 }
-@keyframes fade {
-  0% {
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/19/01/45/windrader-1837635_960_720.jpg");
-  }
-  33% {
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/19/01/45/windrader-1837635_960_720.jpg");
-  }
-  67% {
-    background-image: url("https://cdn.pixabay.com/photo/2014/04/05/11/30/windmill-316030_960_720.jpg");
-  }
+.card-header img {
+  opacity: 0.5;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(2);
+}
+.card-header-text h1,
+.card-header-text p,
+.card-header-text h4 {
+  color: #ecf0f1;
+  text-shadow: 5px 5px 10px black;
+}
+.card-header-bottom img {
+  max-height: 30vh;
+  min-width: 100%;
+  object-fit: cover;
 }
 .card {
   background-color: #ecf0f1;
@@ -103,12 +101,13 @@ img:hover {
   font-size: 2rem;
 }
 .calc {
-  height: 20vh;
+  height: 30vh;
   min-width: 100vw;
   object-fit: cover;
 }
 .logo-slider {
   position: relative;
+  min-height: 30vh;
 }
 .slide {
   width: 100%;
@@ -145,7 +144,7 @@ img:hover {
   transform: rotateZ(180deg);
 }
 .contact-row {
-  background-color: rgba(211, 84, 0, 0.5);
+  background-color: rgba(211, 85, 1, 0.6);
 }
 .contact-row img {
   opacity: 0.5;
