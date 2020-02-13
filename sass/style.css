@@ -65,6 +65,7 @@ img:hover {
 }
 .card-header {
   background-color: rgba(0, 0, 0, 0.603) !important;
+  border-radius: 0;
 }
 .card-header img {
   opacity: 0.5;
@@ -87,6 +88,12 @@ img:hover {
   background-color: #ecf0f1;
   padding: 5;
   border: none;
+}
+.card-first {
+  background-color: #27ae60;
+  height: 300px;
+  max-width: 100vh;
+  margin-bottom: 10px;
 }
 .text-on-image {
   position: relative;
@@ -157,4 +164,14 @@ img:hover {
 }
 iframe {
   width: 100%;
+}
+@media (max-width: 700px) {
+  .card-first {
+    background-color: rgba(38, 110, 182, 0.822);
+  }
+}
+@media (min-width: 800px) {
+  .card-first {
+    max-width: 350px;
+  }
 }

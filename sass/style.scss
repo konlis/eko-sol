@@ -117,6 +117,7 @@ img:hover {
 
 .card-header {
     background-color: rgba(0, 0, 0, 0.603) !important;
+    border-radius: 0;
 
     img {
         opacity: 0.5;
@@ -142,6 +143,18 @@ img:hover {
     padding: 5;
     border: none;
 }
+
+.card-first {
+    //background-image: url('/images/forest.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    background-color: $body-color-green;
+    height: 300px;
+    max-width: 100vh;
+    margin-bottom: 10px;
+}
+
 
 .text-on-image {
     position: relative;
@@ -221,3 +234,21 @@ iframe {
 }
 
 
+/*Responsive*/
+
+@media (max-width: 700px) {
+  .card-first {
+    background-color: rgba(38, 110, 182, 0.822);
+    }
+}
+@media (min-width: 800px) {
+  .card-first {
+    max-width: 350px;
+
+    }
+}
+@media (max-width: 1000px) {
+//         .deck {
+//        flex: none;
+//    }
+}
