@@ -92,6 +92,11 @@ img:hover {
   padding: 5;
   border: none;
 }
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
 .text-card-under-content {
   background-color: rgba(243, 156, 18, 0.6);
   transform: translateY(225px);
