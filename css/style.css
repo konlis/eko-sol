@@ -111,17 +111,81 @@ img:hover {
 }
 
 /*Cards*/
+.back {
+  background-color: #2980b9;
+}
+
 .card {
   background-color: #ecf0f1;
   padding: 5;
   border: none;
 }
 
-.card-first {
-  background-color: #27ae60;
+.text-card-under-content {
+  background-color: rgba(243, 156, 18, 0.6);
+  transform: translateY(225px);
+  border-radius: 0 0 20px 20px;
+  padding: 6px 0px;
+  transition: ease-out .2s;
+}
+
+.title-cards3 {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.row-cards3 {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.title-cards3 {
+  color: #2c3e50;
+  text-shadow: 5px 5px 20px black;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-in-cards {
+  border-radius: 20px;
   height: 300px;
   max-width: 100vh;
   margin-bottom: 10px;
+  padding: 0;
+  transition: ease-out .2s;
+}
+
+.card-in-cards:hover .text-card-under-content {
+  background-color: #f39d12;
+  transition: ease-in .1s;
+}
+
+.card-first {
+  background-image: url("https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg");
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.card-first:hover {
+  background-color: rgba(0, 0, 0, 0.459);
+  background-blend-mode: color;
+  transition: ease-in-out .1s;
+}
+
+.card-second {
+  background-image: url("https://cdn.pixabay.com/photo/2015/10/12/15/27/light-bulb-984551_960_720.jpg");
+  background-color: rgba(0, 0, 0, 0.555);
+  background-position: center;
+}
+
+.card-second:hover {
+  background-color: rgba(0, 0, 0, 0.459);
+  background-blend-mode: color;
+}
+
+.card-third {
+  background-color: rgba(0, 0, 0, 0.301);
+  background-image: url("https://cdn.pixabay.com/photo/2016/04/25/23/30/home-1353389_960_720.jpg");
+  background-position: right;
 }
 
 .text-on-image {
@@ -131,7 +195,7 @@ img:hover {
 
 .text-overlay {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -219,7 +283,7 @@ iframe {
 }
 
 @media (min-width: 800px) {
-  .card-first {
+  .card-in-cards {
     max-width: 350px;
   }
 }

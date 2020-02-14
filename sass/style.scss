@@ -137,24 +137,73 @@ img:hover {
 }
 
 /*Cards*/
-
+.back {
+    background-color: $body-color-blue;
+}
 .card {
     background-color: $body-color-light;
     padding: 5;
     border: none;
 }
-
-.card-first {
-    //background-image: url('/images/forest.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
-    background-color: $body-color-green;
+.text-card-under-content {
+    background-color: rgba(243, 156, 18, 0.6);;
+    transform: translateY(225px);
+    border-radius: 0 0 20px 20px;
+    padding: 6px 0px;
+    transition: ease-out .2s;
+}
+.title-cards3 {
+    justify-content: center;
+}
+.row-cards3 {
+    justify-content: space-between;
+}
+.title-cards3 {
+    color: $body-color-dark;
+    text-shadow:5px 5px 20px black;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.card-in-cards {
+    border-radius: 20px;
     height: 300px;
     max-width: 100vh;
     margin-bottom: 10px;
+    padding: 0;
+    transition: ease-out .2s;
 }
-
+.card-in-cards:hover {
+    .text-card-under-content {
+    background-color: rgb(243, 157, 18);
+    transition: ease-in .1s;
+}
+}
+.card-first {
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg');
+    background-color: rgba(0, 0, 0, 0.192);
+    //background-blend-mode: color;
+}
+.card-first:hover {
+        background-color: rgba(0, 0, 0, 0.459);
+        background-blend-mode: color;
+        transition: ease-in-out .1s;
+}
+.card-second {
+    background-image: url('https://cdn.pixabay.com/photo/2015/10/12/15/27/light-bulb-984551_960_720.jpg');
+    background-color: rgba(0, 0, 0, 0.555);
+    background-position: center;
+    //background-blend-mode: color;
+}
+.card-second:hover {
+      background-color: rgba(0, 0, 0, 0.459);
+        background-blend-mode: color;
+}
+.card-third {
+    background-color: rgba(0, 0, 0, 0.301);
+    background-image: url('https://cdn.pixabay.com/photo/2016/04/25/23/30/home-1353389_960_720.jpg');
+    background-position: right;
+    //background-blend-mode: color;
+}
 
 .text-on-image {
     position: relative;
@@ -162,7 +211,7 @@ img:hover {
 }
 .text-overlay {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: $font-color-light;
@@ -242,7 +291,7 @@ iframe {
     }
 }
 @media (min-width: 800px) {
-  .card-first {
+  .card-in-cards {
     max-width: 350px;
 
     }
