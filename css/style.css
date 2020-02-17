@@ -42,16 +42,18 @@ img:hover {
 .row {
   -ms-flex-align: center;
       align-items: center;
+  padding-bottom: 15px;
 }
 
 /*Navigation*/
 .navbar {
   background-color: #f39c12;
+  padding: 0;
 }
 
 .nav-item:hover {
   background-color: #27ae60;
-  transition: ease .5;
+  transition: ease-in .5;
 }
 
 .nav-item:hover a {
@@ -130,7 +132,7 @@ img:hover {
 
 .text-card-under-content {
   background-color: rgba(243, 156, 18, 0.6);
-  transform: translateY(225px);
+  transform: translateY(224px);
   border-radius: 0 0 20px 20px;
   padding: 6px 0px;
   transition: ease-out .2s;
@@ -160,6 +162,7 @@ img:hover {
   margin-bottom: 10px;
   padding: 0;
   transition: ease-out .2s;
+  box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card-in-cards:hover .text-card-under-content {
@@ -193,6 +196,11 @@ img:hover {
   background-color: rgba(0, 0, 0, 0.301);
   background-image: url("https://cdn.pixabay.com/photo/2016/04/25/23/30/home-1353389_960_720.jpg");
   background-position: right;
+}
+
+.card-third:hover {
+  background-color: rgba(0, 0, 0, 0.459);
+  background-blend-mode: color;
 }
 
 .text-on-image {
@@ -280,6 +288,53 @@ img:hover {
 
 iframe {
   width: 100%;
+}
+
+/*Folie*/
+.folie {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.folie-title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.folie-title i {
+  font-size: 30px;
+  color: #b71540;
+  padding: 0 5px;
+}
+
+.folie-text {
+  text-align: justify;
+}
+
+.folie-text span {
+  font-weight: bold;
+}
+
+.folie-cards {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.folie-cards i {
+  font-size: 50px;
+  color: #b71540;
+}
+
+.folie-cards p {
+  margin-bottom: 5px;
+}
+
+.folie-body-icon {
+  text-align: center;
 }
 
 /*Responsive*/
