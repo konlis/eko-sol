@@ -21,49 +21,11 @@ img:hover {
   transform: scale(1.1);
   transition: ease-in 0.2s;
 }
-.under-nav {
-  background-color: #ecf0f1;
-}
-.layout {
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 0;
-  background-color: #ecf0f1;
-}
 .row {
   align-items: center;
-  padding-bottom: 15px;
 }
-.navbar {
-  background-color: #f39c12;
-  padding: 0;
-}
-.nav-item:hover {
-  background-color: #27ae60;
-  transition: ease-in 0.5;
-}
-.nav-item:hover a {
-  font-weight: 600;
-}
-.logo h1 {
-  font-family: "Exo", sans-serif;
-}
-.icon p {
-  font-size: 25px;
-  color: #f39c12;
-  font-weight: 600;
-}
-.fas,
-.fab {
-  font-size: 50px;
-  color: #2ecc71;
-  padding-right: 10px;
-}
-.contact {
-  padding: 0 20px;
-}
-.contact h5 {
-  font-size: 20px;
+.navbar-light {
+  background-color: white;
 }
 .card-header {
   background-color: rgba(0, 0, 0, 0.603) !important;

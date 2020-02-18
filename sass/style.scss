@@ -16,7 +16,7 @@ $font-logo: 'Exo', sans-serif;
 $font-body: 'Montserrat', sans-serif;
 $font-h: 'Open Sans', sans-serif;
  
-// /*Global*/
+/*Global*/
 
 #pages {
   > * {
@@ -44,78 +44,15 @@ img:hover {
     transform: scale(1.1);
     transition: ease-in .2s;
 }
-
-.under-nav {
-    background-color: $body-color-light;
-}
-.layout {
-     align-items: center;
-     justify-content: space-between;
-     padding: 50px 0;
-     background-color: $body-color-light;
-}
 .row {
     align-items: center;
-    padding-bottom: 15px;
 }
 
 /*Navigation*/
-.navbar {
-    background-color: $navi-color;
-    padding: 0;
-}
-.nav-item:hover {
-    background-color: $body-color-green;
-    transition: ease-in .5;
-    a {
-        font-weight: 600;
-    }
-}
-/*Logo*/
-.logo h1 {
-    font-family: $font-logo;
-}
-.icon p {
-    font-size: 25px;
-    color: $navi-color;
-    font-weight: 600;
-}
-.fas, .fab {
-    font-size: 50px;
-    color: $icon-color;
-    padding-right: 10px;;
-}
-.contact {
-    padding: 0 20px;
-}
-.contact h5 {
-    font-size: 20px;
-}
 
-/*Background slider*/
-
-// .slider {
-//     background-color: rgba(0, 0, 0, 0.61) !important;
-//     background-image: url('https://cdn.pixabay.com/photo/2017/09/12/13/21/photovoltaic-system-2742302_960_720.jpg');
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-blend-mode: color;
-//     height: 100%;
-//     animation: fade 15s ease-in-out 3s infinite;
-//     overflow: hidden;
-//     transition: ease-out 5s;;
-// }
-// @keyframes fade {
-//     0% {
-//         background-image: url('https://cdn.pixabay.com/photo/2016/11/19/01/45/windrader-1837635_960_720.jpg')
-//     }
-//     33% {
-//         background-image: url('https://cdn.pixabay.com/photo/2016/11/19/01/45/windrader-1837635_960_720.jpg')
-//     }
-//     67% {
-//         background-image: url('https://cdn.pixabay.com/photo/2014/04/05/11/30/windmill-316030_960_720.jpg')
-//     }
-// }
+.navbar-light {
+    background-color: white;
+}
 
 /*Header*/
 

@@ -15,27 +15,42 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-light">
+           
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class='nav-logo link'>
+                <a class='navbar-brand' href="#home"><img src='/images/logo-slider/Solar.png'></a>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#about">O Firmie<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#foto">Fotowoltaika</a>
+                        <a class="nav-link" href="#about">O Firmie</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#folie">Folie Grzewcze</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Oferta
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item nav-link" href="#foto">Fotowoltaika</a>
+                            <a class="dropdown-item nav-link" href="#folie">Folie grzewcze</a>
+                            <a class="dropdown-item nav-link" href="#pompy">Pompy Ciepła</a>
+                            <a class="dropdown-item nav-link" href="#badania">Badania termowizyjne</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pcp">Program Czyste Powietrze</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pmp">Program Mój Prąd</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Dotacje
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item nav-link" href="#pcp">Program Czyste Powietrze</a>
+                            <a class="dropdown-item nav-link" href="#pmp">Program Mój Prąd</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#collab">Współpraca</a>
@@ -46,41 +61,6 @@
                 </ul>
             </div>
         </nav>
-        <div class='under-nav'>
-            <div class='container d-md-flex layout'>
-                <div class='row col-md-6'>
-                    <div class='logo d-flex link'>
-                        <a href="#home">
-                        <div class='icon'>
-                            <i class="fas fa-solar-panel"></i>
-                        </div>
-                        <div>
-                            <h1>EKO-SOL</h1>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                <div class='row col-md-6'>
-                    <div class='contact'>
-                        <div class='phone'>
-                            <h5>Skontaktuj się:</h5>
-                        </div>
-                        <div class='icon d-flex'>
-                            <i class="fas fa-phone-square"></i>
-                            <p>777 555 444</p>
-                        </div>
-                    </div>
-                    <div class='contact'>
-                        <div class='face'>
-                            <h5>Znajdź nas:</h5>
-                        </div>
-                        <div class='icon'>
-                            <a><i class="fab fa-facebook-square"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
     <div id='pages'>
         <section id='home' class='active'>
@@ -240,58 +220,81 @@
                 </div>
                 <div class='row col-12 '>
                     <div class="card">
-                        <div class='row py-5'>
+                        <div class='foto-title'>
                             <h4>Korzyści:</h4>
                         </div>
-                        <div class="card mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
+                        <div class='card'>
+                            <div class='foto-cards d-flex'>
+                                <div class="card mb-3" style="max-width: 18rem;">
+                                    <div class="card-body foto-body-icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">zdrowie</h5>
+                                        <p class="card-text">optymalna wilgotność</p>
+                                        <p class="card-text">idealny komfort</p>
+                                        <p class="card-text">przyjazny alergikom</p>
+                                    </div>
+                                </div>
+                                <div class="card mb-3" style="max-width: 18rem;">
+                                    <div class="card-body foto-body-icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">zdrowie</h5>
+                                        <p class="card-text">optymalna wilgotność</p>
+                                        <p class="card-text">idealny komfort</p>
+                                        <p class="card-text">przyjazny alergikom</p>
+                                    </div>
+                                </div>
+                                <div class="card mb-3" style="max-width: 18rem;">
+                                    <div class="card-body foto-body-icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">zdrowie</h5>
+                                        <p class="card-text">optymalna wilgotność</p>
+                                        <p class="card-text">idealny komfort</p>
+                                        <p class="card-text">przyjazny alergikom</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='foto-cards d-flex'>
+                                <div class="card mb-3" style="max-width: 18rem;">
+                                    <div class="card-body foto-body-icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">zdrowie</h5>
+                                        <p class="card-text">optymalna wilgotność</p>
+                                        <p class="card-text">idealny komfort</p>
+                                        <p class="card-text">przyjazny alergikom</p>
+                                    </div>
+                                </div>
+                                <div class="card mb-3" style="max-width: 18rem;">
+                                    <div class="card-body foto-body-icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">zdrowie</h5>
+                                        <p class="card-text">optymalna wilgotność</p>
+                                        <p class="card-text">idealny komfort</p>
+                                        <p class="card-text">przyjazny alergikom</p>
+                                    </div>
+                                </div>
+                                <div class="card mb-3" style="max-width: 18rem;">
+                                    <div class="card-body foto-body-icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">zdrowie</h5>
+                                        <p class="card-text">optymalna wilgotność</p>
+                                        <p class="card-text">idealny komfort</p>
+                                        <p class="card-text">przyjazny alergikom</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                            </div>
-                        </div>
-                        <div class="card mb-3" style="max-width: 18rem;">
-                            <div class="card-header">Header</div>
-                            <div class="card-body">
-                                <h5 class="card-title">Primary card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                    content.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class='row col-12 '>
                     <h4>Rządowe dotacje oraz ulgi podatkowe sprawiają że Twoja instalacja zwróci się już w 4 -5 lat</h4>
