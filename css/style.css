@@ -32,15 +32,25 @@ img:hover {
       align-items: center;
 }
 
+.container {
+  background-color: white;
+}
+
 /*Navigation*/
 .navbar-light {
   background-color: white;
 }
 
 /*Header*/
+.deck {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
 .card-header {
   background-color: rgba(0, 0, 0, 0.603) !important;
   border-radius: 0;
+  margin: 10px 0;
 }
 
 .card-header img {
@@ -51,9 +61,22 @@ img:hover {
   filter: contrast(2);
 }
 
-.card-header-text h1, .card-header-text p, .card-header-text h4 {
+.card-img-overlay {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.card-header-text h1 {
   color: #ecf0f1;
   text-shadow: 5px 5px 10px black;
+  background-color: rgba(67, 197, 99, 0.808);
+  width: 100%;
+  display: block;
+  padding: 8px 8px;
+  word-wrap: anywhere;
+  font-size: 2rem;
 }
 
 .card-header-bottom img {
@@ -171,7 +194,7 @@ img:hover {
 /*Calculator container*/
 .calc {
   height: 30vh;
-  min-width: 100vw;
+  min-width: 50vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -179,7 +202,7 @@ img:hover {
 /*logo-slider*/
 .logo-slider {
   position: relative;
-  min-height: 30vh;
+  min-height: 20vh;
 }
 
 .slide {
@@ -204,7 +227,7 @@ img:hover {
 .logo-slider::before, .logo-slider::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #ecf0f1, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
   height: 100%;
   width: 200px;
@@ -221,27 +244,7 @@ img:hover {
   transform: rotateZ(180deg);
 }
 
-/*Contact*/
-.contact-row {
-  background-color: rgba(211, 85, 1, 0.6);
-}
-
-.contact-row img {
-  opacity: 0.5;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.form-container, .form-card {
-  background-color: white;
-}
-
-iframe {
-  width: 100%;
-}
-
-/*Folie*/
+/*Folie grzewcze*/
 .folie {
   -ms-flex-pack: center;
       justify-content: center;
@@ -288,16 +291,30 @@ iframe {
   text-align: center;
 }
 
-/*Responsive*/
-@media (max-width: 700px) {
-  .card-first {
-    background-color: rgba(38, 110, 182, 0.822);
-  }
+/*Contact*/
+.contact-row {
+  background-color: rgba(211, 85, 1, 0.6);
 }
 
-@media (min-width: 800px) {
-  .card-in-cards {
-    max-width: 350px;
+.contact-row img {
+  opacity: 0.5;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.form-container, .form-card {
+  background-color: white;
+}
+
+iframe {
+  width: 100%;
+}
+
+/*Responsive*/
+@media (max-width: 800px) {
+  .card-header-text h1 {
+    font-size: 2px;
   }
 }
 /*# sourceMappingURL=style.css.map */
