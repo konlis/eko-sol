@@ -81,7 +81,7 @@ img:hover {
 .card-header-text h1 {
     color: $body-color-light;
     text-shadow: 5px 5px 10px black;
-    background-color: rgba(67, 197, 99, 0.808);
+    background-color: rgba(44, 62, 80, 0.589);;
     width: 100%;
     display: block;
     padding: 8px 8px;
@@ -102,6 +102,7 @@ img:hover {
 //     position: absolute;
 //     transform: translateY(200%);
 // }
+
 
 /*Cards*/
 
@@ -197,12 +198,38 @@ img:hover {
     font-size: 2rem;
 }
 
-/*Calculator container*/
+/*Footer*/
+
+.footer-calc {
+    padding: 20px 0;
+}
+.footer-contact {
+    padding-right: 30px;
+}
+.footer-icon {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: left;
+    i {
+        padding: 0 15px;
+        font-size: 40px;
+        color: $body-color-green
+    }
+} 
 
 .calc {
     height: 30vh;
     min-width: 50vw;
     object-fit: cover;
+}
+
+.copyright {
+    background-color:$body-color-dark;
+    color: white;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
 }
 
 /*logo-slider*/
