@@ -42,6 +42,9 @@ h1 {
 .navbar-light {
   background-color: white;
 }
+.dropdown-item.active {
+  background-color: white;
+}
 .deck {
   justify-content: center;
 }
@@ -172,6 +175,7 @@ footer {
   background-color: #f1f2f6;
   position: fixed;
   bottom: 0;
+  width: 100vw;
 }
 .footer-calc {
   padding: 20px 0;
@@ -411,10 +415,18 @@ button:active {
   .card-header-text h1 {
     font-size: 25px;
   }
+  .navbar-brand-logo {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  footer {
+    position: relative;
+  }
   .row-footer {
     justify-content: center;
   }
-  .navbar-brand-logo {
-    display: none;
+  .calc {
+    width: 90vw;
   }
 }

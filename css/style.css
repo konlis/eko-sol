@@ -55,8 +55,8 @@ h1 {
   background-color: white;
 }
 
-.dropdown-item .active {
-  background-color: black;
+.dropdown-item.active {
+  background-color: white;
 }
 
 /*Header*/
