@@ -62,17 +62,17 @@ h1 {
 }
 .navbar-nav li {
     padding: 0 20px;
-    // a {
-    //     transition: ease-in-out .2s;
-    // }
 }
-.navbar-nav li:hover {
+.navbar-nav li:hover, .dropdown-item:hover {
     border: 1px solid;
     border-color: $body-color-green;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 .navbar-light {
     background-color: white;
+}
+.dropdown-item .active {
+    background-color: black;
 }
 
 /*Header*/
@@ -217,6 +217,9 @@ h1 {
 /*Footer*/
 footer {
     background-color:rgba(241, 242, 246,1.0);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
 .footer-calc {
     padding: 20px 0;
@@ -417,7 +420,7 @@ button {
   border: none;
   font-size: 0.9rem;
   padding: 0.5rem 0.8em;
-  background: #69c773;
+  background: $body-color-green;
   border-bottom: 1px solid #498b50;
   color: white;
   -webkit-font-smoothing: antialiased;
@@ -460,17 +463,36 @@ button:active {
      -moz-border-radius: 4px;
           border-radius: 4px;
 }
+/*Moderation*/
 
+.moderation-image {
+    padding-bottom: 50px;
+    img {
+        height: 20vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
 /*Responsive*/
 
 @media (max-width: 800px) {
   .card-header-text h1 {
       font-size: 25px;
   }
+  
+  
+  .navbar-brand-logo {
+      display: none;
+  }
+}
+@media (max-width: 1100px) {
+    footer {
+      position: relative;
+  }
   .row-footer {
       justify-content: center;
   }
-  .navbar-brand-logo {
-      display: none;
+  .calc {
+      width: 90vw;
   }
 }
