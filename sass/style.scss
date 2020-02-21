@@ -52,13 +52,24 @@ h1 {
 }
 
 /*Navigation*/
-.nav-logo, .navbar-brand, .logo-footer {
+.nav-logo, .navbar-brand {
     img {
         width: 50%;
     }
 }
 .navbar-collapse {
-    justify-content: space-around;
+    justify-content: center;
+}
+.navbar-nav li {
+    padding: 0 20px;
+    // a {
+    //     transition: ease-in-out .2s;
+    // }
+}
+.navbar-nav li:hover {
+    border: 1px solid;
+    border-color: $body-color-green;
+    border-radius: 15px;
 }
 .navbar-light {
     background-color: white;
@@ -73,13 +84,21 @@ h1 {
     background-color: rgba(0, 0, 0, 0.603) !important;
     border-radius: 0;
     margin: 10px 0;
+    transition: ease-in-out .3s;
+    overflow: hidden;
 
     img {
         opacity: 0.5;
         height: 100%;
         object-fit: cover;
         filter: contrast(2);
+        transition: ease-in-out .3s;
     }
+}
+.card-header:hover img {
+    transform: scale(1.3);
+    filter: contrast(1);
+     opacity: 1;
 }
 .card-img-overlay {
     display: flex;
@@ -100,16 +119,6 @@ h1 {
     min-width: 100%;
     object-fit: cover;
 }
-
-// .card-header::after {
-//     content: '';
-//     width: 100%;
-//     height: 20%;
-//     background-color: rgba(26, 188, 156,1.0);
-//     position: absolute;
-//     transform: translateY(200%);
-// }
-
 
 /*Cards*/
 
@@ -206,36 +215,50 @@ h1 {
 }
 
 /*Footer*/
-
+footer {
+    background-color:rgba(241, 242, 246,1.0);
+}
 .footer-calc {
     padding: 20px 0;
     justify-content: space-around;
 }
-.footer-contact {
+.footer-contact-card {
     padding-right: 30px;
+    background-color:rgba(241, 242, 246,1.0);
+    flex-direction: row;
+    display: flex;
 }
-.logo-footer {
-
+.footer-contact-logo {
+    text-align: center;
     img {
         padding-bottom: 10px;
     }
 }
-.footer-icon {
+.footer-contact-icon {
     display: flex;
-    padding: 5px;
+    flex-direction: column;
     align-items: center;
     justify-content: left;
     i {
-        padding: 0 15px;
-        font-size: 30px;
+        padding: 8px 15px;
+        font-size: 25px;
         color: $body-color-green
     }
 } 
+.footer-contact-contact {
+    padding: 8px 10px;
+    div:first-child {
+        text-transform: uppercase;
+    }
+}
+.card-calc {
+    margin: 30px 0;
+}
 .card-calc, .calc-text {
     border-radius: 30px;
 }
 .calc {
-    height: 20vh;
+    height: 15vh;
     min-width: 50vw;
     object-fit: cover;
     border-radius: inherit;
@@ -259,10 +282,10 @@ h1 {
 
 .logo-slider {
     position: relative;
-    min-height: 20vh;
+    min-height: 18vh;
 }
 .slide {
-    width: 100%;
+    width: 100vh;
     //height: 100%;
     animation: slideshow 10s linear infinite;
     img {
