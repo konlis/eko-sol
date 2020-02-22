@@ -262,7 +262,7 @@ footer {
 }
 .calc {
     height: 15vh;
-    min-width: 50vw;
+    width: 45vw;
     object-fit: cover;
     border-radius: inherit;
 }
@@ -286,18 +286,18 @@ footer {
 .logo-slider {
     position: relative;
     min-height: 18vh;
+    overflow: hidden;
 }
 .slide {
-    width: 100vh;
-    //height: 100%;
-    animation: slideshow 10s linear infinite;
+    height: 50px;
+    animation: slideshow 35s linear infinite;
     img {
         margin-left: 30px;
         filter: grayscale(1);
+        height: 100%;
     }
 }
 .overflow {
-    overflow: hidden;
     flex-wrap: nowrap;
 }
 
@@ -379,11 +379,9 @@ footer {
         padding-bottom: 20px;
     }
 }
- 
 iframe {
     width: 100%;
     height:450px;
-
 }
 
 .field {
@@ -475,17 +473,34 @@ button:active {
 }
 /*Responsive*/
 
+@media (max-width: 575px) {
+    .footer-contact-card {
+        flex-direction: column;
+    }
+    .card-calc {
+        overflow: hidden;
+    }
+    .iframe-card {
+        margin-top:78px;
+    }
+}
 @media (max-width: 800px) {
   .card-header-text h1 {
       font-size: 25px;
   }
-  
-  
-  .navbar-brand-logo {
+  .calc-text h1 {
+      font-size: 25px;
+  }
+   .calc-text h4 {
+      font-size: 20px;
+  }
+}
+@media (max-width: 990px) {
+    .navbar-brand-logo {
       display: none;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1199px) {
     footer {
       position: relative;
   }
@@ -493,6 +508,6 @@ button:active {
       justify-content: center;
   }
   .calc {
-      width: 90vw;
+      width: 80vw;
   }
 }

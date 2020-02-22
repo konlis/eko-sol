@@ -284,7 +284,7 @@ footer {
 
 .calc {
   height: 15vh;
-  min-width: 50vw;
+  width: 45vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: inherit;
@@ -311,20 +311,21 @@ footer {
 .logo-slider {
   position: relative;
   min-height: 18vh;
+  overflow: hidden;
 }
 
 .slide {
-  width: 100vh;
-  animation: slideshow 10s linear infinite;
+  height: 50px;
+  animation: slideshow 35s linear infinite;
 }
 
 .slide img {
   margin-left: 30px;
   filter: grayscale(1);
+  height: 100%;
 }
 
 .overflow {
-  overflow: hidden;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -523,16 +524,38 @@ button:active {
 }
 
 /*Responsive*/
+@media (max-width: 575px) {
+  .footer-contact-card {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .card-calc {
+    overflow: hidden;
+  }
+  .iframe-card {
+    margin-top: 78px;
+  }
+}
+
 @media (max-width: 800px) {
   .card-header-text h1 {
     font-size: 25px;
   }
+  .calc-text h1 {
+    font-size: 25px;
+  }
+  .calc-text h4 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 990px) {
   .navbar-brand-logo {
     display: none;
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1199px) {
   footer {
     position: relative;
   }
@@ -541,7 +564,7 @@ button:active {
         justify-content: center;
   }
   .calc {
-    width: 90vw;
+    width: 80vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
