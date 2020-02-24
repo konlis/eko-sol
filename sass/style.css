@@ -176,8 +176,6 @@ h1 {
 }
 footer {
   background-color: #f1f2f6;
-  position: fixed;
-  bottom: 0;
   width: 100vw;
 }
 .footer-calc {
@@ -281,6 +279,13 @@ footer {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
+}
+.before-title::before h1 {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  color: green;
 }
 .folie {
   justify-content: center;

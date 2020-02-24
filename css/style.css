@@ -29,6 +29,8 @@ h1 {
 .row {
   -ms-flex-align: center;
       align-items: center;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 .container {
@@ -225,8 +227,6 @@ h1 {
 /*Footer*/
 footer {
   background-color: #f1f2f6;
-  position: fixed;
-  bottom: 0;
   width: 100vw;
 }
 
@@ -364,12 +364,32 @@ footer {
 }
 
 /*Folie grzewcze*/
+.before-title h1 span {
+  color: #b71540;
+  font-weight: 800;
+  font-family: "Exo", sans-serif;
+}
+
+.before-title::before, .before-title::after {
+  content: "";
+  width: 100%;
+  color: #27ae60;
+  border: 3px solid;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.before-title h1::after {
+  margin-top: 10px;
+}
+
 .folie {
   -ms-flex-pack: center;
       justify-content: center;
 }
 
 .folie-title {
+  margin-top: 50px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -553,6 +573,9 @@ button:active {
   }
   .iframe-card {
     margin-top: 78px;
+  }
+  .folie-cards {
+    display: block;
   }
 }
 
