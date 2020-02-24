@@ -12,7 +12,7 @@ function changePages () {
     let pagesMatchingHash = [];
 
     if (window.location.hash.length > 10) {
-        const idFromHash = window.location.hash.replace('#/','');
+        const idFromHash = window.location.hash.replace('#','');
         //console.log('idFromHash', idFromHash);
 
         pagesMatchingHash = this.pages.filter(function (page) {
@@ -63,48 +63,61 @@ changePages();
 
 /*Contact form*/
 
-window.addEventListener("DOMContentLoaded", function () {
+// window.addEventListener("DOMContentLoaded", function () {
 
-    // get the form elements defined in your form HTML above
+//     // get the form elements defined in your form HTML above
 
-    var form = document.getElementById("my-form");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
+//     var form = document.getElementById("my-form");
+//     var button = document.getElementById("my-form-button");
+//     var status = document.getElementById("my-form-status");
 
-    // Success and Error functions for after the form is submitted
+//     // Success and Error functions for after the form is submitted
 
-    function success() {
-        form.reset();
-        button.style = "display: none ";
-        status.innerHTML = "Thanks!";
-    }
+//     function success() {
+//         form.reset();
+//         button.style = "display: none ";
+//         status.innerHTML = "Thanks!";
+//     }
 
-    function error() {
-        status.innerHTML = "Oops! There was a problem.";
-    }
+//     function error() {
+//         status.innerHTML = "Oops! There was a problem.";
+//     }
 
-    // handle the form submission event
+//     // handle the form submission event
 
-    form.addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        var data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
-    });
+//     form.addEventListener("submit", function (ev) {
+//         ev.preventDefault();
+//         var data = new FormData(form);
+//         ajax(form.method, form.action, data, success, error);
+//     });
+// });
+
+// // helper function for sending an AJAX request
+
+// function ajax(method, url, data, success, error) {
+//     var xhr = new XMLHttpRequest();
+//     xhr.open(method, url);
+//     xhr.setRequestHeader("Accept", "application/json");
+//     xhr.onreadystatechange = function () {
+//         if (xhr.readyState !== XMLHttpRequest.DONE) return;
+//         if (xhr.status === 200) {
+//             success(xhr.response, xhr.responseType);
+//         } else {
+//             error(xhr.status, xhr.response, xhr.responseType);
+//         }
+//     };
+//     xhr.send(data);
+// }
+
+
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    console.log("tab shown...");
+    localStorage.setItem('activeTab', $(e.target).attr('href'));
 });
 
-// helper function for sending an AJAX request
-
-function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-            success(xhr.response, xhr.responseType);
-        } else {
-            error(xhr.status, xhr.response, xhr.responseType);
-        }
-    };
-    xhr.send(data);
+// read hash from page load and change tab
+var activeTab = localStorage.getItem('activeTab');
+if (activeTab) {
+    $('.nav-tabs a[href="' + activeTab + '"]').tab('show');
 }
