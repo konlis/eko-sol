@@ -383,12 +383,12 @@ footer {
   margin-top: 10px;
 }
 
-.folie {
+.row-cards {
   -ms-flex-pack: center;
       justify-content: center;
 }
 
-.folie-title {
+.cards-title {
   margin-top: 50px;
   display: -ms-flexbox;
   display: flex;
@@ -398,31 +398,31 @@ footer {
       justify-content: center;
 }
 
-.folie-title i {
+.cards-title i {
   font-size: 30px;
   color: #b71540;
   padding: 0 5px;
 }
 
-.folie-text {
+.card-text-text {
   text-align: justify;
 }
 
-.folie-text span {
+.card-text-text span {
   font-weight: bold;
 }
 
-.folie-cards {
+.card-cards {
   display: -ms-flexbox;
   display: flex;
 }
 
-.folie-cards i {
+.card-cards i {
   font-size: 50px;
   color: #b71540;
 }
 
-.folie-cards p {
+.card-cards p {
   margin-bottom: 5px;
 }
 
@@ -574,7 +574,7 @@ button:active {
   .iframe-card {
     margin-top: 78px;
   }
-  .folie-cards {
+  .card-cards {
     display: block;
   }
 }

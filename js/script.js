@@ -28,6 +28,7 @@ function changePages () {
             event.preventDefault();
             /* TODO: get page id from href */
             const id = clickedElement.getAttribute('href').replace('#', '');
+            console.log('id', id)
             /* TODO: activate page */
             activatePage(id);
         });
@@ -110,14 +111,15 @@ changePages();
 // }
 
 
+// const tabs = 
+// $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+//     console.log("tab shown...");
+//     localStorage.setItem('activeTab', $(e.target).attr('href'));
+// });
 
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    console.log("tab shown...");
-    localStorage.setItem('activeTab', $(e.target).attr('href'));
-});
-
-// read hash from page load and change tab
-var activeTab = localStorage.getItem('activeTab');
-if (activeTab) {
-    $('.nav-tabs a[href="' + activeTab + '"]').tab('show');
-}
+// // read hash from page load and change tab
+// var activeTab = localStorage.getItem('activeTab');
+// if (activeTab) {
+//     $('.nav-tabs a[href="' + activeTab + '"]').tab('show');
+//     console.log("tab ", activeTab);
+// }
