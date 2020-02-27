@@ -28,6 +28,23 @@ h1 {
 .container {
   background-color: white;
 }
+.card {
+  background-color: #fff;
+  padding: 5;
+  border: none;
+}
+.text-on-image {
+  position: relative;
+  overflow: hidden;
+}
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+}
 .nav-logo img,
 .navbar-brand img {
   width: 50%;
@@ -90,91 +107,6 @@ h1 {
   max-height: 30vh;
   min-width: 100%;
   object-fit: cover;
-}
-.back {
-  background-color: #2980b9;
-}
-.card {
-  background-color: #fff;
-  padding: 5;
-  border: none;
-}
-.btn {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, 40%);
-}
-.text-card-under-content {
-  background-color: rgba(243, 156, 18, 0.6);
-  transform: translateY(224px);
-  border-radius: 0 0 20px 20px;
-  padding: 6px 0px;
-  transition: ease-out 0.2s;
-}
-.title-cards3 {
-  justify-content: center;
-}
-.row-cards3 {
-  justify-content: space-between;
-}
-.title-cards3 {
-  color: #2c3e50;
-  text-shadow: 5px 5px 20px black;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.card-in-cards {
-  border-radius: 20px;
-  height: 300px;
-  max-width: 100vh;
-  margin-bottom: 10px;
-  padding: 0;
-  transition: ease-out 0.2s;
-  box-shadow: 4px 4px 7px 0px rgba(0, 0, 0, 0.5);
-}
-.card-in-cards:hover .text-card-under-content {
-  background-color: #f39d12;
-  transition: ease-in 0.1s;
-}
-.card-first {
-  background-image: url("https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg");
-  background-color: rgba(0, 0, 0, 0.192);
-}
-.card-first:hover {
-  background-color: rgba(0, 0, 0, 0.459);
-  background-blend-mode: color;
-  transition: ease-in-out 0.1s;
-}
-.card-second {
-  background-image: url("https://cdn.pixabay.com/photo/2015/10/12/15/27/light-bulb-984551_960_720.jpg");
-  background-color: rgba(0, 0, 0, 0.555);
-  background-position: center;
-}
-.card-second:hover {
-  background-color: rgba(0, 0, 0, 0.459);
-  background-blend-mode: color;
-}
-.card-third {
-  background-color: rgba(0, 0, 0, 0.301);
-  background-image: url("https://cdn.pixabay.com/photo/2016/04/25/23/30/home-1353389_960_720.jpg");
-  background-position: right;
-}
-.card-third:hover {
-  background-color: rgba(0, 0, 0, 0.459);
-  background-blend-mode: color;
-}
-.text-on-image {
-  position: relative;
-  overflow: hidden;
-}
-.text-overlay {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 2rem;
 }
 footer {
   background-color: #f1f2f6;
@@ -281,6 +213,22 @@ footer {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
+}
+.foto-container .cards-title i {
+  color: #2980b9;
+}
+.foto-container .card-cards i {
+  color: #2980b9;
+}
+.foto-container img {
+  height: 300px;
+  object-fit: cover;
+}
+.foto-container .row-cards .card {
+  display: block;
+}
+.foto-container .row-cards .card p {
+  text-align: left;
 }
 .before-title h1 span {
   color: #b71540;
@@ -470,6 +418,9 @@ button:active {
   }
   .calc-text h4 {
     font-size: 20px;
+  }
+  .foto-container .card-cards .card-body:nth-child(2) {
+    padding: 5px;
   }
 }
 @media (max-width: 990px) {
