@@ -352,7 +352,6 @@ footer {
     }
 }
 
-
 /*Folie grzewcze*/
 
 .before-title h1 span {
@@ -405,6 +404,37 @@ footer {
 .folie-body-icon {
     text-align: center;
 }
+
+/*Termomodernizacja*/
+
+.termo h1:first-of-type {
+    word-break: wrap;
+}
+
+/*Testy*/
+
+.testy .card-img {
+    height: 300px;
+    object-fit: contain;
+}
+.test-row-2 {
+    align-items: flex-start;
+}
+.testy-body-icon i {
+    font-size: 40px;
+    color: $body-color-blue
+}
+.card-test img {
+    width: 100%;
+}
+/*Audyt*/
+
+.audyt .card-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
 /*Contact*/
 
 .contact-row {

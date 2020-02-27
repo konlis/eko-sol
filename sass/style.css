@@ -280,6 +280,28 @@ footer {
 .folie-body-icon {
   text-align: center;
 }
+.termo h1:first-of-type {
+  word-break: wrap;
+}
+.testy .card-img {
+  height: 300px;
+  object-fit: contain;
+}
+.test-row-2 {
+  align-items: flex-start;
+}
+.testy-body-icon i {
+  font-size: 40px;
+  color: #2980b9;
+}
+.card-test img {
+  width: 100%;
+}
+.audyt .card-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
 .contact-row {
   background-color: rgba(211, 85, 1, 0.6);
 }

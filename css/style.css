@@ -369,6 +369,40 @@ footer {
   text-align: center;
 }
 
+/*Termomodernizacja*/
+.termo h1:first-of-type {
+  word-break: wrap;
+}
+
+/*Testy*/
+.testy .card-img {
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.test-row-2 {
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
+.testy-body-icon i {
+  font-size: 40px;
+  color: #2980b9;
+}
+
+.card-test img {
+  width: 100%;
+}
+
+/*Audyt*/
+.audyt .card-img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*Contact*/
 .contact-row {
   background-color: rgba(211, 85, 1, 0.6);
