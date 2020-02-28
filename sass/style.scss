@@ -39,9 +39,9 @@ body {
 }
 .card-body p {
     text-align: justify;
-}
-h1 {
+    h1 {
     font-family: $font-h;
+    }
 }
 // img:hover {
 //     transform: scale(1.1);
@@ -387,6 +387,7 @@ footer {
 }
 .card-text-text {
     text-align: justify;
+
         span {
         font-weight: bold;
         }
@@ -415,10 +416,16 @@ footer {
 
 .testy .card-img {
     height: 300px;
-    object-fit: contain;
+    object-fit: cover;
 }
 .test-row-2 {
     align-items: flex-start;
+    .card-body {
+        padding-top: 0;
+    }
+}
+.test-row-3 .card-img {
+    object-fit: contain;
 }
 .testy-body-icon i {
     font-size: 40px;

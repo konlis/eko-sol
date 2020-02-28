@@ -17,7 +17,7 @@ body {
 .card-body p {
   text-align: justify;
 }
-h1 {
+.card-body p h1 {
   font-family: "Open Sans", sans-serif;
 }
 .row {
@@ -285,10 +285,16 @@ footer {
 }
 .testy .card-img {
   height: 300px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .test-row-2 {
   align-items: flex-start;
+}
+.test-row-2 .card-body {
+  padding-top: 0;
+}
+.test-row-3 .card-img {
+  object-fit: contain;
 }
 .testy-body-icon i {
   font-size: 40px;

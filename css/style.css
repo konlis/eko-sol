@@ -22,7 +22,7 @@ body {
   text-align: justify;
 }
 
-h1 {
+.card-body p h1 {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -377,13 +377,22 @@ footer {
 /*Testy*/
 .testy .card-img {
   height: 300px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .test-row-2 {
   -ms-flex-align: start;
       align-items: flex-start;
+}
+
+.test-row-2 .card-body {
+  padding-top: 0;
+}
+
+.test-row-3 .card-img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .testy-body-icon i {
