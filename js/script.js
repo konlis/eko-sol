@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 /*Change pages without reloading*/
 
@@ -125,3 +126,4 @@ changePages();
 //     $('.nav-tabs a[href="' + activeTab + '"]').tab('show');
 //     console.log("tab ", activeTab);
 // }
+
