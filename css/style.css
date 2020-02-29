@@ -155,6 +155,21 @@ body {
   font-size: 2rem;
 }
 
+.card-header-text button {
+  color: white;
+  background-color: rgba(44, 62, 80, 0.589);
+  width: 60%;
+  margin: 10px 0;
+  text-shadow: 5px 5px 10px black;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.card-header-text button:hover {
+  background-color: #27ae5f;
+  color: white;
+}
+
 .card-header-bottom img {
   max-height: 30vh;
   min-width: 100%;

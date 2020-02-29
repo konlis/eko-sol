@@ -151,13 +151,27 @@ body {
 .card-header-text h1 {
     color: $body-color-light;
     text-shadow: 5px 5px 10px black;
-    background-color: rgba(44, 62, 80, 0.589);;
+    background-color: rgba(44, 62, 80, 0.589);
     width: 100%;
     display: block;
     padding: 8px 8px;
     word-wrap: anywhere;
     font-size: 2rem;
 }
+.card-header-text button {
+    color: $font-color-light;
+    background-color:rgba(44, 62, 80, 0.589);
+    width: 60%;
+    margin: 10px 0;
+    text-shadow: 5px 5px 10px black;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.card-header-text button:hover {
+    background-color:rgb(39, 174, 95);
+    color: $font-color-light;
+}
+
 .card-header-bottom img {
     max-height: 30vh;
     min-width: 100%;
