@@ -451,6 +451,20 @@ footer {
      object-fit: cover;
 }
 
+/*Dotacje*/
+.air .card-img, .prad .card-img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.air .text-under {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 /*Contact*/
 .contact-row {
   background-color: rgba(211, 85, 1, 0.6);
@@ -613,9 +627,8 @@ button:active {
   .foto-container .card-cards .card-body:nth-child(2) {
     padding: 5px;
   }
-  .badania .card-body {
-    padding-left: 0;
-    padding-right: 0;
+  .badania .card-body:last-of-type, .air .card-body:last-of-type {
+    padding: 20px 0;
   }
 }
 
