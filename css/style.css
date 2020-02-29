@@ -31,6 +31,8 @@ body {
       align-items: center;
   padding-left: .5rem;
   padding-right: .5rem;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 .container {
@@ -57,6 +59,25 @@ body {
   font-size: 2rem;
 }
 
+.nav li {
+  padding: 5px 10px;
+  transition: ease-in-out .1s;
+}
+
+.nav li a {
+  color: #063a7e;
+  text-decoration: none;
+}
+
+.nav li:hover {
+  background-color: #27ae60;
+  transition: ease-in-out .1s;
+}
+
+.nav li:hover a {
+  color: white;
+}
+
 /*Navigation*/
 .nav-logo img, .navbar-brand img {
   width: 50%;
@@ -69,12 +90,14 @@ body {
 
 .navbar-nav li {
   padding: 0 20px;
+  transition: ease-in-out .1s;
+  border-radius: 20px;
 }
 
 .navbar-nav li:hover, .dropdown-item:hover {
   border: 1px solid;
   border-color: #27ae60;
-  border-radius: 20px;
+  transition: ease-in-out .1s;
 }
 
 .navbar-light {
@@ -371,7 +394,23 @@ footer {
 
 /*Termomodernizacja*/
 .termo h1:first-of-type {
-  word-break: wrap;
+  word-break: break-all;
+}
+
+/*Badania*/
+.badania .card-img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.badania .row {
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
+.badania .card-body:last-of-type {
+  padding-top: 0;
 }
 
 /*Testy*/
@@ -561,7 +600,7 @@ button:active {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .card-header-text h1 {
     font-size: 25px;
   }
@@ -573,6 +612,10 @@ button:active {
   }
   .foto-container .card-cards .card-body:nth-child(2) {
     padding: 5px;
+  }
+  .badania .card-body {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

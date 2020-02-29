@@ -4,7 +4,9 @@
 function changePages () {
 
     this.pages = Array.from(document.querySelector('#pages').children);
-    this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
+    //this.tabs = Array.from(document.querySelector('#tabs').children);
+    //this.allpages = this.pages + this.tabs;
+    this.navLinks = Array.from(document.querySelectorAll('.nav-link:not(.k)'));
     this.buttons = Array.from(document.querySelectorAll('.link a'));
     //console.log(this.buttons, this.pages, this.navLinks);
 
