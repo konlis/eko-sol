@@ -607,7 +607,7 @@ button:active {
 
 .moderation-image img, .wspolpraca-image img {
   height: 20vh;
-  width: 100%;
+  width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
 }

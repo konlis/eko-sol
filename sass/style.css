@@ -47,6 +47,21 @@ body {
   color: #fff;
   font-size: 2rem;
 }
+.nav li {
+  padding: 5px 10px;
+  transition: ease-in-out 0.1s;
+}
+.nav li a {
+  color: #063a7e;
+  text-decoration: none;
+}
+.nav li:hover {
+  background-color: #27ae60;
+  transition: ease-in-out 0.1s;
+}
+.nav li:hover a {
+  color: #fff;
+}
 .nav-logo img,
 .navbar-brand img {
   width: 50%;
@@ -56,12 +71,14 @@ body {
 }
 .navbar-nav li {
   padding: 0 20px;
+  transition: ease-in-out 0.1s;
+  border-radius: 20px;
 }
 .navbar-nav li:hover,
 .dropdown-item:hover {
   border: 1px solid;
   border-color: #27ae60;
-  border-radius: 20px;
+  transition: ease-in-out 0.1s;
 }
 .navbar-light {
   background-color: white;
@@ -104,6 +121,19 @@ body {
   padding: 8px 8px;
   word-wrap: anywhere;
   font-size: 2rem;
+}
+.card-header-text button {
+  color: #fff;
+  background-color: rgba(44, 62, 80, 0.589);
+  width: 60%;
+  margin: 10px 0;
+  text-shadow: 5px 5px 10px black;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.card-header-text button:hover {
+  background-color: #27ae5f;
+  color: #fff;
 }
 .card-header-bottom img {
   max-height: 30vh;
@@ -285,6 +315,16 @@ footer {
 .termo h1:first-of-type {
   word-break: break-all;
 }
+.badania .card-img {
+  height: 300px;
+  object-fit: cover;
+}
+.badania .row {
+  align-items: flex-start;
+}
+.badania .card-body:last-of-type {
+  padding-top: 0;
+}
 .testy .card-img {
   height: 300px;
   object-fit: cover;
@@ -309,6 +349,18 @@ footer {
   height: 300px;
   width: 100%;
   object-fit: cover;
+}
+.air .card-img,
+.prad .card-img {
+  height: 300px;
+  object-fit: cover;
+}
+.air .text-under,
+.prad .text-under {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 20px;
 }
 .contact-row {
   background-color: rgba(211, 85, 1, 0.6);
@@ -422,7 +474,7 @@ button:active {
 .moderation-image img,
 .wspolpraca-image img {
   height: 20vh;
-  width: 100%;
+  width: 100vw;
   object-fit: cover;
 }
 @media (max-width: 575px) {
@@ -439,7 +491,7 @@ button:active {
     display: block;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .card-header-text h1 {
     font-size: 25px;
   }
@@ -451,6 +503,10 @@ button:active {
   }
   .foto-container .card-cards .card-body:nth-child(2) {
     padding: 5px;
+  }
+  .badania .card-body:last-of-type,
+  .air .card-body:last-of-type {
+    padding: 20px 0;
   }
 }
 @media (max-width: 990px) {
