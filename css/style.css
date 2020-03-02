@@ -612,6 +612,79 @@ button:active {
      object-fit: cover;
 }
 
+/*Dynamic Form*/
+/*Button*/
+.actionbtn {
+  position: fixed;
+  bottom: 70px;
+  right: 80px;
+  z-index: 2;
+}
+
+.action {
+  background-color: #27ae60;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  box-shadow: 0 3px 5px 0 gray;
+}
+
+.action i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.action:hover {
+  background-color: #11a34e;
+}
+
+/*Form*/
+.active-form {
+  display: none;
+}
+
+.dynamicForm .form-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.74);
+  padding: 20px;
+  width: 350px;
+  border-radius: 5px;
+  background-color: #2980b9;
+  color: white;
+}
+
+.dynamicForm h5 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.dynamicForm .form-title i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dynamicForm .form-check-input {
+  width: 20px;
+}
+
+.dynamicForm .form-group a {
+  color: white;
+}
+
+.dynamicForm .btn {
+  background-color: #27ae60;
+}
+
 /*Responsive*/
 @media (max-width: 575px) {
   .footer-contact-card {
