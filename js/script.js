@@ -156,11 +156,24 @@ function ajax(method, url, data, success, error) {
 /*Dynamic Contact form*/
 
 const btn = document.querySelector('.actionbtn');
-const form = document.querySelector('.active-form');
+const form = document.querySelector('.modal-content');
 const closeForm = document.querySelector('.fa-times');
+//const modal = document.getElementById('myModal');
+//const modalBckg
+
+function on() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+function off() {
+    document.getElementById("myModal").style.display = "none";
+}
 
     btn.addEventListener('click', function() {
+        
         form.classList.toggle('active-form')
+        //modal.classList.toggle('modal');
+     on();
     });
     closeForm.addEventListener('click', function(){
         form.classList.add('active-form')
@@ -168,4 +181,4 @@ const closeForm = document.querySelector('.fa-times');
     
 
 
-   
+

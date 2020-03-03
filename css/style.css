@@ -673,7 +673,12 @@ button:active {
   display: none;
 }
 
-.dynamicForm .form-card {
+.dynamicForm {
+  background-color: #b71540;
+  position: fixed;
+}
+
+.modal-content {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -687,28 +692,48 @@ button:active {
   color: white;
 }
 
-.dynamicForm h5 {
+.modal-content h5 {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
 
-.dynamicForm .form-title i {
+.modal-content .form-title i {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
 }
 
-.dynamicForm .form-check-input, .wycena .form-check-input {
+.modal-content .form-check-input, .wycena .form-check-input {
   width: 20px;
 }
 
-.dynamicForm .form-group a {
+.modal-content .form-group a {
   color: white;
 }
 
-.dynamicForm .btn {
+.modal-content .btn {
   background-color: #27ae60;
+}
+
+/*Modal*/
+.modal {
+  position: fixed;
+  /* Sit on top of the page content */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 2;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
 }
 
 /*Wycena*/
