@@ -7,21 +7,21 @@ function changePages () {
     this.pages = Array.from(document.querySelector('#pages').children);
     //this.tabs = Array.from(document.querySelector('#tabs').children);
     //this.allpages = this.pages + this.tabs;
-    this.navLinks = Array.from(document.querySelectorAll('.nav-link:not(.k)'));
+    this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
     this.buttons = Array.from(document.querySelectorAll('.link a'));
     //console.log(this.buttons, this.pages, this.navLinks);
 
 
     let pagesMatchingHash = [];
 
-    if (window.location.hash.length > 10) {
-        const idFromHash = window.location.hash.replace('#','');
-        //console.log('idFromHash', idFromHash);
+    if (window.location.hash.length > 0) {
+        const idFromHash = window.location.hash.replace('#/','');
+        console.log('idFromHash', idFromHash);
 
         pagesMatchingHash = this.pages.filter(function (page) {
             return page.id == idFromHash;
         });
-        //console.log('pagesMatchingHash', pagesMatchingHash);
+        console.log('pagesMatchingHash', pagesMatchingHash);
     }
     this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
 
@@ -70,7 +70,6 @@ changePages();
 window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
-
     var form = document.getElementById("ajax-contact");
     var button = document.getElementById("submit-button");
     var status = document.getElementById("form-messages");
@@ -84,7 +83,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function error() {
-        status.innerHTML = "Oops! There was a problem.";
+        status.innerHTML = "Coś poszło nie tak!";
     }
 
     // handle the form submission event
@@ -93,6 +92,33 @@ window.addEventListener("DOMContentLoaded", function () {
         ev.preventDefault();
         var data = new FormData(form);
         ajax(form.method, form.action, data, success, error);
+    });
+});
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var formWycena = document.getElementById("wycena-contact");
+    var buttonWycena = document.getElementById("submit-button-wycena");
+    var statusWycena = document.getElementById("wycena-status");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        formWycena.reset();
+        buttonWycena.style = "display: none ";
+        statusWycena.innerHTML = "Dziękujemy za wypełnienie formularza. Bierzeme się za wycenę."
+    }
+
+    function error() {
+        statusWycena.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    formWycena.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(formWycena);
+        ajax(formWycena.method, formWycena.action, data, success, error);
     });
 });
 

@@ -63,6 +63,9 @@
                         <a class="nav-link" href="#wspolpraca">Współpraca</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#kontakt">Kontakt</a>
                     </li>
                 </ul>
@@ -874,6 +877,113 @@
                 </div>    
             </div>       
         </section>
+        <section id='blog'>
+            <div class='container blog foto-container'>
+                <div class='row before-title'>
+                    <h1>Blog</h1>
+                </div>
+            </div>
+        </section>
+        <section id='wycena'>
+            <div class='row wycena'>
+                <div class='row text-on-image'>
+                    <div class=' wspolpraca-image'>
+                        <img src='/images/header/wycena.jpg' class='img-fluid'>
+                    </div>
+                    <div class='the-text-image'>
+                        <h1 class=''>Darmowa wycena</h1>
+                    </div>
+                </div>
+                <div class='container'>
+                    <div class='card-text'>
+                        <h5>
+                            Wypełnij formularz poniżej, a w ciągu paru dni wycenimy dla Ciebie całkowity koszt inwestycji ZA DARMO.
+                        </h5>
+                    </div>
+                    <form id="wycena-contact" class='contact-form' action="https://formspree.io/xoqwpnwj" method="POST">
+                        
+                        <div class='form-row'>
+                            <div class="form-group col-md-4">
+                                <label for="moc">Jaka moc instalacji?</label>
+                                <select class="custom-select" required>
+                                    <option value="">Wybierz moc (KW) ?</option>
+                                    <option value="1">mniej niż 2 KW</option>
+                                    <option value="3">2,5 KW</option>
+                                    <option value="4">3 KW</option>
+                                    <option value="5">4 KW</option>
+                                    <option value="6">5 KW</option>
+                                    <option value="7">7,5 KW</option>
+                                    <option value="8">10 KW</option>
+                                    <option value="8">więcej niż 10 KW</option>
+                                </select>
+                                <div class="invalid-feedback">Wybierz dzień</div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="dach-rodzaj">Jakim materiałem pokryty jest dach ?</label>
+                                <select class="custom-select" required>
+                                    <option value="">Wybierz rodzaj poszycia</option>
+                                    <option value="1">Blachodachówka</option>
+                                    <option value="2">Dachówka betonowa/ceramiczna</option>
+                                    <option value="3">Gont</option>
+                                </select>
+                                <div class="invalid-feedback">Example invalid custom select feedback</div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="dach-rodzaj">Gdzie będzie montowana instalacja ?</label>
+                                <select class="custom-select" required>
+                                    <option value="">Wybierz rodzaj montażu</option>
+                                    <option value="1">Dach skośny</option>
+                                    <option value="2">Dach płaski</option>
+                                    <option value="3">Grunt</option>
+                                </select>
+                                <div class="invalid-feedback">Example invalid custom select feedback</div>
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class="form-group col-md-4">
+                                <label for="adres">Adres</label>
+                                <input type="text" class="form-control" placeholder='ul. Słoneczna 7' name='name' id="input-name" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">Województwo</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Wybierz...</option>
+                                    <option>Podkarpackie</option>
+                                    <option>Małopolskie</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputZip">Kod pocztowy</label>
+                                <input type="text" placeholder='55-605' class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                        <div class='form-row'>
+                            <div class="form-group col-md-6">
+                                <label for="phone">Nr telefonu</label>
+                                <input type="text" class="form-control" placeholder='123456789' name='phone' id="input-phone"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="imie">Imię i nazwisko</label>
+                                <input type="text" class="form-control" placeholder='Jan Kowalski' name='name' id="input-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" name='agree' id="check" required>
+                            <label class="form-check-label" for="exampleCheck1">
+                                <a>Twóje dane nie będą wykorzystywane w celach marketingowych ani przekazywane dalej. Potrzebujemy ich tylko do
+                                przygotowania wyceny. Dane są
+                                przetwarzane zgodnie z <a href=''>Polityką Prywatności</a>.
+                            </label>
+                        </div>
+                        <div id="wycena-status">
+                            
+                        </div>
+                        <button id='submit-button-wycena' type="submit" name='submit' class="col-6  btn btn-primary">Wyceń</button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <section id='modernizacja'>
             <div class='row moderation-image'>
                 <img src='/images/header/construction.jpg'>
@@ -918,13 +1028,11 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder='Wpisz numer telefonu' name='phone' id="input-phone"  required>
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control"placeholder='Wpisz e-mail' name='email' id="input-email" aria-describedby="emailHelp" required>
-                </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" name='agree' id="check" required>
                     <label class="form-check-label" for="exampleCheck1">
-                        Zgadzam się z <a href=''>Polityką Przetwarzania danych osobowych</a>
+                        <a>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Dane są
+                            przetwarzane zgodnie z <a href=''>Polityką Prywatności</a>.
                     </label>
                 </div>
                 <div id="form-messages">
@@ -970,13 +1078,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="card ml-3 card-calc text-white">
-                    <img src="https://cdn.pixabay.com/photo/2014/07/06/13/55/calculator-385506_960_720.jpg" class="card-img calc"
+                <div class="card ml-3 card-calc link text-white">
+                    <a href='#wycena'>
+                        <img src="/images/header/wycena.jpg" class="card-img calc"
                         alt="Kalkulator">
-                    <div class="card-img-overlay calc-text text-center">
-                        <h1 class="card-title text-uppercase">Kalkulator</h1>
-                        <h4 class="card-text">Sprawdź opłacalność inwestycji!</h4>
-                    </div>
+                        <div class="card-img-overlay calc-text text-center">
+                            <h1 class="card-title text-uppercase">Darmowa wycena</h1>
+                            <h4 class="card-text">Kliknij i sprawdź</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
