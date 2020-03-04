@@ -75,6 +75,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function success() {
         form.reset();
         button.style = "display: none ";
+        status.style = "display: block";
         status.innerHTML = "Dziękujemy. Oddzwonimy o wskazanej porze.";
     }
 
@@ -102,7 +103,8 @@ window.addEventListener("DOMContentLoaded", function () {
     function success() {
         formWycena.reset();
         buttonWycena.style = "display: none ";
-        statusWycena.innerHTML = "Dziękujemy za wypełnienie formularza. Bierzeme się za wycenę."
+        statusWycena.style = "display: block";
+        statusWycena.innerHTML = "Dziękujemy za wypełnienie formularza. Zadzwonimy do Ciebie z informacją o wycenie."
     }
 
     function error() {

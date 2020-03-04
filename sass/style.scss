@@ -299,6 +299,7 @@ footer {
 .card-calc a, .calc-text {
     border-radius: 30px;
 }
+
 .calc {
     height: 15vh;
     width: 45vw;
@@ -310,8 +311,12 @@ footer {
     color:#ecf0f1;
     text-shadow: 5px 5px 10px black;
     background-color: rgba(44, 62, 80, 0.589);
+    transition: ease-in-out .3s;
 }
-
+footer .card-text:hover {
+    transform: scale(1.15);
+    transition: ease-in-out .2s;
+}
 .copyright {
     background-color:$body-color-dark;
     color: white;
@@ -387,7 +392,6 @@ footer {
     border-radius: 25px;
     padding: 20px;
     margin: 10px 0;
-    background-color: rgba(183, 21, 64, 0.185);;
 }
 .pompa img {
     height: 100%;
@@ -652,8 +656,8 @@ button:active {
 
 .actionbtn {
     position: fixed;
-    bottom: 70px;
-    right: 80px;
+    bottom: 50px;
+    right: 10%;
     z-index: 2;
 }
 .action {
@@ -662,6 +666,7 @@ button:active {
     width: 70px;
     border-radius: 50%;
     box-shadow: 0 3px 5px 0 gray;
+    transition: ease-in-out .2s;
 }
 .action i {
     position: absolute;
@@ -674,6 +679,8 @@ button:active {
 }
 .action:hover {
     background-color: rgb(17, 163, 78);
+    transform: scale(1.1);
+    transition: ease-in-out .2s;
 }
 
 /*Modal*/
@@ -710,8 +717,8 @@ button:active {
 }
 .modal-content .form-title i {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1.5rem;
+    right: 1.5rem;
     cursor: pointer;
 }
 .modal-content .form-check-input, .wycena .form-check-input {
@@ -730,10 +737,18 @@ button:active {
     margin-top: 30px;
     margin-bottom: 50px;
 }
-.wycena .btn {
+.wycena .btn, .blog .btn {
     background-color: $body-color-green;
     left: 25%;
     margin-top: 20px;
+}
+.form-messages {
+    display:none;
+    text-align: center;
+    color: black;
+    border: 2px solid rgba(39, 174, 95, 0.507);
+    padding: 5px;
+    border-radius: 10px;
 }
 /*Responsive*/
 
@@ -749,6 +764,16 @@ button:active {
     }
     .card-cards {
         display: block;
+    }
+    .modal-content {
+        width: 300px;
+    }
+    .action {
+        height: 50px;
+        width: 50px;
+        i {
+           font-size: 20px; 
+        }
     }
 }
 @media (max-width: 767px) {

@@ -498,8 +498,8 @@ button:active {
 }
 .actionbtn {
   position: fixed;
-  bottom: 70px;
-  right: 80px;
+  bottom: 10rem;
+  right: 10rem;
   z-index: 2;
 }
 .action {
@@ -551,8 +551,8 @@ button:active {
 }
 .modal-content .form-title i {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1.5rem;
+  right: 1.5rem;
   cursor: pointer;
 }
 .modal-content .form-check-input,
@@ -586,6 +586,16 @@ button:active {
   }
   .card-cards {
     display: block;
+  }
+  .modal-content {
+    width: 300px;
+  }
+  .action {
+    height: 50px;
+    width: 50px;
+  }
+  .action i {
+    font-size: 20px;
   }
 }
 @media (max-width: 767px) {
