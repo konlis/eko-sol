@@ -5,16 +5,12 @@
 function changePages () {
 
     this.pages = Array.from(document.querySelector('#pages').children);
-    //this.tabs = Array.from(document.querySelector('#tabs').children);
-    //this.allpages = this.pages + this.tabs;
     this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
     this.buttons = Array.from(document.querySelectorAll('.link a'));
-    //console.log(this.buttons, this.pages, this.navLinks);
-
 
     let pagesMatchingHash = [];
 
-    if (window.location.hash.length > 0) {
+    if (window.location.hash.length > 2) {
         const idFromHash = window.location.hash.replace('#/','');
         console.log('idFromHash', idFromHash);
 
@@ -155,30 +151,38 @@ function ajax(method, url, data, success, error) {
 
 /*Dynamic Contact form*/
 
-const btn = document.querySelector('.actionbtn');
-const form = document.querySelector('.modal-content');
-const closeForm = document.querySelector('.fa-times');
+// const btn = document.querySelector('.actionbtn');
+// const form = document.querySelector('.modal-content');
+// const closeForm = document.querySelector('.fa-times');
+// const modal = document.querySelector('.dynamicForm');
 //const modal = document.getElementById('myModal');
-//const modalBckg
 
-function on() {
-    document.getElementById("myModal").style.display = "block";
-}
-
-function off() {
-    document.getElementById("myModal").style.display = "none";
-}
-
-    btn.addEventListener('click', function() {
-        
-        form.classList.toggle('active-form')
-        //modal.classList.toggle('modal');
-     on();
-    });
-    closeForm.addEventListener('click', function(){
-        form.classList.add('active-form')
-    });
     
+window.onload = function(){
 
+    function toggleModal() {
+        
+        //const form = document.querySelector('.modal-content');
+        
+        const modal = document.querySelector('.dynamicForm');
+
+        modal.classList.toggle('modal-hidden');
+    }
+
+    const closeForm = document.querySelector('.fa-times');
+    const btn = document.querySelector('.actionbtn');
+
+    btn.addEventListener('click', toggleModal);
+    closeForm.addEventListener('click', toggleModal);
+
+closeModal(e);
+    function closeModal(e) {
+    if (e.target.modal != 'modal') {
+        closeForm.addEventListener('click', toggleModal);
+        console.log(target, 'target')
+    }
+}
+    
+}
 
 

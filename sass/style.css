@@ -180,7 +180,7 @@ footer {
 .card-calc {
   margin: 30px 0;
 }
-.card-calc,
+.card-calc a,
 .calc-text {
   border-radius: 30px;
 }
@@ -262,6 +262,19 @@ footer {
 .foto-container .row-cards .card p {
   text-align: left;
 }
+.color-text {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: rgba(183, 21, 64, 0.185);
+}
+.pompa img {
+  height: 100%;
+}
+.before-title {
+  justify-content: center;
+}
 .before-title h1 span {
   color: #b71540;
   font-weight: 800;
@@ -292,6 +305,12 @@ footer {
   font-size: 30px;
   color: #b71540;
   padding: 0 5px;
+}
+.folie .card-body {
+  padding: 15px;
+}
+.folie .card-body p {
+  text-align: left;
 }
 .card-text-text {
   text-align: justify;
@@ -479,8 +498,8 @@ button:active {
 }
 .actionbtn {
   position: fixed;
-  bottom: 150px;
-  right: 150px;
+  bottom: 70px;
+  right: 80px;
   z-index: 2;
 }
 .action {
@@ -495,7 +514,65 @@ button:active {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+.action:hover {
+  background-color: #11a34e;
+}
+.modal-hidden {
+  display: none;
+}
+.dynamicForm {
+  background-color: rgba(44, 62, 80, 0.507);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+}
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.74);
+  padding: 20px;
+  width: 400px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: black;
+}
+.modal-content h5 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.modal-content .form-title i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.modal-content .form-check-input,
+.wycena .form-check-input {
+  width: 20px;
+}
+.modal-content .form-group a {
+  color: black;
+}
+.modal-content .btn {
+  background-color: #27ae60;
+}
+.wycena form {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.wycena .btn {
+  background-color: #27ae60;
+  left: 25%;
+  margin-top: 20px;
 }
 @media (max-width: 575px) {
   .footer-contact-card {

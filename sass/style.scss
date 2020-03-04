@@ -646,7 +646,7 @@ button:active {
     }
 }
 
-/*Dynamic Form*/
+/*Modal*/
 
 /*Button*/
 
@@ -676,29 +676,32 @@ button:active {
     background-color: rgb(17, 163, 78);
 }
 
-/*Form*/
+/*Modal*/
 
-.active-form {
+.modal-hidden {
     display: none;
 }
 .dynamicForm {
-    background-color: $icon-color-red;
+    background-color: rgba(44, 62, 80, 0.507);
     position: fixed;
-    
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    top: 0;
 }
 .modal-content {
     position: fixed;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 5;
     box-shadow: 2px 2px 14px 0px rgba(0,0,0,0.74);
     padding: 20px;
     //height: 400px;
     width: 400px;
     border-radius: 5px;
-    background-color: $body-color-blue;
-    color: white;
+    background-color: $body-color-light;
+    color: black;
 }
     
 .modal-content h5 {
@@ -715,26 +718,10 @@ button:active {
     width: 20px;
 }
 .modal-content .form-group a {
-    color: white;
+    color: black;
 }
 .modal-content .btn {
     background-color: $body-color-green;
-}
-
-/*Modal*/
-
-.modal {
-  position: fixed; /* Sit on top of the page content */
-  //display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
 }
 
 /*Wycena*/
