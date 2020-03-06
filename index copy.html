@@ -9,7 +9,7 @@
     <meta name='keywords' content="folie grzewcze rzeszów, eco-sol rzeszów, wypełnianie wniosków mój prąd rzeszów, eco-sol fotowoltaika">
     <meta name='robots' content='index, follow'>
     <title>Eco-Sol. Odnawialne źródła energii.</title>
-    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Exo:400,600|Montserrat|Open+Sans&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
@@ -35,13 +35,10 @@
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-lin" href="start.html">Start<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#start">Start<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-lin" href="o-nas.html">O Firmie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="test.html">test</a>
+                        <a class="nav-link" href="#o-nas">O Firmie</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -122,7 +119,7 @@
                                             <a href='#program-czyste-powietrze'>
                                                 <button type="button" class="btn">Czyste Powietrze</button>
                                             </a>
-                                            <h1 class='card-title text-uppercase m-0 font-weight-bolder'>Dotacje</h1>
+                                            <h1 class='card-title text-uppercase font-weight-bolder'>Dotacje</h1>
                                             <a href='#program-moj-prad'>
                                                 <button type="button" class="btn">Mój Prąd</button>
                                             </a>
@@ -220,13 +217,13 @@
                 <div class='row before-title'>
                     <h1>Fotowoltaika</h1>
                 </div>
-                <div class='row py-3'>
+                <div class='row'>
                         <div class="row no-gutters">
                             <div class="col-md-6">
                                 <img src="/images/header/photovoltaic.jpg" class="card-img" alt="Red-Snake">
                             </div>
                             <div class="col-md-6">
-                                <div class="card-body">
+                                <div class="card-body link">
                                     <h5 class="card-title">Co to jest ?</h5>
                                     <p class="card-text card-text-text">
                                         Fotowoltaika to proces wytwarzania energii elektrycznej z darmowego promieniowania słonecznego. Obecnie rozwój tej
@@ -236,6 +233,7 @@
                                         właściwie nie istnieje. Żywotność takiego systemu szacowana jest na <span>co najmniej 25 lat</span> i w całym tym okresie zazwyczaj obowiązuje
                                         gwarancja producenta.
                                     </p>
+                                    <a href='#wycena'><button type="button" class="btn btn-success">Darmowa wycena</button></a>
                                 </div>
                             </div>
                         </div>
@@ -306,7 +304,7 @@
                 <div class='row before-title'>
                     <h1>Folie grzewcze <span>RED SNAKE</span></h1>
                 </div>
-                <div class='row py-3'>
+                <div class='row'>
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-md-4">
@@ -626,7 +624,7 @@
                         <div class='row py-5'>
                                 <div class="row no-gutters">
                                     <div class="">
-                                        <img src="/images/card/baloons.jpg"
+                                        <img src="/images/header/czyste.png"
                                             class="card-img" alt="Powietrze">
                                     </div>
                                     <div class="">
@@ -836,38 +834,29 @@
                                 <div id="form-messages">
                                     
                                 </div>
-                                <button id='submit-button' type="submit" name='submit' class="btn btn-primary">Wyślij</button>
+                                <button id='submit-button' type="submit" name='submit' class="btn btn-success">Wyślij</button>
                             </form> -->
-                            <form class="contact__form col-12 col-xl-8 justify-content-center" method="post" action="https://formspree.io/xzbrygzg">
-                                <!-- Starting of successful form message -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                            Your message was sent successfully.
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Ending of successful form message -->
-                                <!-- Element of the ajax contact form -->
+                            <form id="contact" class="contact-form col-12 col-xl-8 justify-content-center" method="post" action="https://formspree.io/xzbrygzg">
                                 <div class="row">
                                     <div class="col-12 form-group">
-                                        <input name="name" type="text" class="form-control" placeholder="Imię i nazwisko" required>
+                                        <input name="Imie" type="text" class="form-control" placeholder="Imię i nazwisko" required>
                                     </div>
                                     <div class="col-12 form-group">
-                                        <input name="place type=" text" class="form-control" placeholder="Miejscowość">
+                                        <input name="Miejscowosc" text" class="form-control" placeholder="Miejscowość">
                                     </div>
                                     <div class="col-12 form-group">
-                                        <input name="email" type="email" class="form-control" placeholder="Email" required>
+                                        <input name="Email" type="email" class="form-control" placeholder="Email" required>
                                     </div>
                                     <div class="col-12 form-group">
-                                        <input name="phone" type="text" class="form-control" placeholder="Telefon" required>
+                                        <input name="Telefon" type="number" class="form-control" placeholder="Telefon" required>
                                     </div>
                                     <div class="col-12 form-group">
-                                        <textarea name="message" class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
+                                        <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
                                     </div>
-                                    <div class="col-12 form-group">
-                                        <input name="submit" type="submit" class="btn btn-success" value="Wyślij wiadomość">
+                                    <div id="form-contact" class='form-messages'>
+                                    
                                     </div>
+                                    <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
                                 </div>
                             </form>
                         </div>
@@ -892,7 +881,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Najlepsza lokata kapitału</h5>
                                 <p class="card-text link">Przy dzisiejszych oprocentowaniach lokat bankowych ciężko dostać lokatę na 3% w skali roku...</p>
-                                <a href="#blog/nalepsza-lokata" class="btn btn-secondary nav-link">Więcej..</a>
+                                <a href="#blog/nalepsza-lokata" class="btn btn-success nav-link">Więcej..</a>
                             </div>
                         </div>
                     </div>
@@ -901,7 +890,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Special title treatment</h5>
                                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <a href="#" class="btn btn-success">Go somewhere</a>
                             </div>
                         </div>
                     </div> -->
@@ -952,86 +941,91 @@
                             Wypełnij formularz poniżej, a w ciągu paru dni wycenimy dla Ciebie całkowity koszt inwestycji ZA DARMO.
                         </h5>
                     </div>
-                    <form id="wycena-contact" class='contact-form' action="https://formspree.io/xoqwpnwj" method="POST">
-                        
-                        <div class='form-row'>
-                            <div class="form-group col-md-4">
-                                <label for="moc">Jaka moc instalacji?</label>
-                                <select class="custom-select" required>
-                                    <option value="">Wybierz moc (KW) ?</option>
-                                    <option value="1">mniej niż 2 KW</option>
-                                    <option value="3">2,5 KW</option>
-                                    <option value="4">3 KW</option>
-                                    <option value="5">4 KW</option>
-                                    <option value="6">5 KW</option>
-                                    <option value="7">7,5 KW</option>
-                                    <option value="8">10 KW</option>
-                                    <option value="8">więcej niż 10 KW</option>
+                    <form id="wycena-contact" class='contact-form' action="https://formspree.io/xoqwpnwj" method="POST"> 
+                    <!-- <div class='form-row'> -->
+                        <div class='form-group '>
+                            <div class="form-group">
+                                <label for="moc">Sposób wyliczenia:</label>
+                                <select name='Moc/Rachunki' class="custom-select mb-2" required>
+                                    <option value="">Wybierz..</option>
+                                    <option value="Rachunki">Średnio mięsięczne rachunki za prąd</option>
+                                    <option value="Moc KW">Wielkość instalacji KW</option>
                                 </select>
-                                <div class="invalid-feedback">Wybierz dzień</div>
+                                <input type="text" pattern="\d*" maxlength="4" class="form-control" placeholder='Wpisz liczbę' name='kwpln' id="moc" required>
+                                <div class="invalid-feedback">Wybierz sposób</div>
+                                <span id="numloc"></span><br />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="dach-rodzaj">Jakim materiałem pokryty jest dach ?</label>
-                                <select class="custom-select" required>
+                                <select name='Poszycie' class="custom-select" required>
                                     <option value="">Wybierz rodzaj poszycia</option>
-                                    <option value="1">Blachodachówka</option>
-                                    <option value="2">Dachówka betonowa/ceramiczna</option>
-                                    <option value="3">Gont</option>
+                                    <option value="Blachodachówka">Blachodachówka</option>
+                                    <option value="Dachówka betonowa/ceramiczna">Dachówka betonowa/ceramiczna</option>
+                                    <option value="Gont">Gont/papa</option>
                                 </select>
-                                <div class="invalid-feedback">Example invalid custom select feedback</div>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="dach-rodzaj">Gdzie będzie montowana instalacja ?</label>
-                                <select class="custom-select" required>
+                                <select name='Montaz' class="custom-select" required>
                                     <option value="">Wybierz rodzaj montażu</option>
-                                    <option value="1">Dach skośny</option>
-                                    <option value="2">Dach płaski</option>
-                                    <option value="3">Grunt</option>
+                                    <option value="Dach skośny">Dach skośny</option>
+                                    <option value="Dach płaski">Dach płaski</option>
+                                    <option value="Grunt">Grunt</option>
                                 </select>
-                                <div class="invalid-feedback">Example invalid custom select feedback</div>
+                                <div class="invalid-feedback">Wybierz gdzie będzie montowana instalacja.</div>
                             </div>
                         </div>
-                        <div class='form-row'>
-                            <div class="form-group col-md-4">
+                        <div class='form-group '>
+                            <div class="form-group">
                                 <label for="adres">Adres</label>
-                                <input type="text" class="form-control" placeholder='ul. Słoneczna 7' name='name' id="input-name" required>
+                                <input type="text" class="form-control" placeholder='ul. Słoneczna 7' name='Adres' id="input-name" required>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="inputState">Województwo</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Wybierz...</option>
-                                    <option>Podkarpackie</option>
-                                    <option>Małopolskie</option>
+                                <select id="inputState" name='Wojewodztwo' class="form-control">
+                                    <option value="">Wybierz...</option>
+                                    <option value='Podkarpackie'>Podkarpackie</option>
+                                    <option value='Lubelskie'>Lubelskie</option>
+                                    <option value='Świętokrzyskie'>Świętokrzyskie</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="inputZip">Kod pocztowy</label>
-                                <input type="text" placeholder='55-605' class="form-control" id="inputZip">
+                                <input type="text" name='Kod' pattern="[0-9]{2}-[0-9]{3}" placeholder='55-605' class="form-control" id="inputZip">
                             </div>
+                           
+                            
                         </div>
-                        <div class='form-row'>
-                            <div class="form-group col-md-6">
+                    <!-- </div> -->
+                    <!-- <div class='form-row'> -->
+                        <div class='form-group'>
+                            <div class="form-group">
                                 <label for="phone">Nr telefonu</label>
-                                <input type="text" class="form-control" placeholder='123456789' name='phone' id="input-phone"
+                                <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="form-control" placeholder='123-456-789' name='Telefon' id="Telefon"
                                     required>
                             </div>
-                            <div class="form-group col-md-6">
+                        </div>
+                        <div class='form-group'>
+                            <div class="form-group">
                                 <label for="imie">Imię i nazwisko</label>
-                                <input type="text" class="form-control" placeholder='Jan Kowalski' name='name' id="input-name" required>
+                                <input type="text" class="form-control" placeholder='Jan Kowalski' name='Imie' id="input-name" required>
                             </div>
                         </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" name='agree' id="check" required>
+                    <!-- </div> -->
+                    <!-- <div class='form-row'> -->
+                         <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" name='Zgoda' id="check" required>
                             <label class="form-check-label" for="exampleCheck1">
                                 <a>Twóje dane nie będą wykorzystywane w celach marketingowych ani przekazywane dalej. Potrzebujemy ich tylko do
                                 przygotowania wyceny. Dane są
                                 przetwarzane zgodnie z <a href=''>Polityką Prywatności</a>.
                             </label>
                         </div>
-                        <div id="wycena-status">
+                    <!-- </div> -->
+                        <div id="wycena-status" class='form-messages'>
                             
                         </div>
-                        <button id='submit-button-wycena' type="submit" name='submit' class="col-6  btn btn-primary">Wyceń</button>
+                        <button id='submit-button-wycena' type="submit" class="col-6  btn btn-success">Wyceń</button>
                     </form>
                 </div>
             </div>
@@ -1047,57 +1041,63 @@
         </section>
         
     </div>
-    <div class='dynamicForm modal' id='myModal'>
-        <div class=''>
-            <div class=' modal-content'>
-                <div class=form-title>
-                    <h5>Kiedy mamy oddzwonić ?</h5>
-                    <i class="fas fa-times"></i>
+    <div class='dynamicForm modal-hidden'>
+        <div class=' modal-content'>
+            <div class=form-title>
+                <h5>Kiedy mamy oddzwonić ?</h5>
+                <i class="fas fa-times"></i>
+            </div>
+            <form id="ajax-contact" class='contact-form' action="https://formspree.io/mzbgjnnp" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder='Wpisz imię' name='Imie' id="input-name" required>
                 </div>
-                <form id="ajax-contact" class='contact-form' action="https://formspree.io/mzbgjnnp" method="POST">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder='Wpisz imię' name='name' id="input-name" aria-describedby="emailHelp">
+                <div class='form-row'>
+                    <div class="form-group col-sm-6">
+                        <select name='Dzień' class="custom-select" required>
+                            <option value="Dzisiaj">Dzisiaj</option>
+                            <option value="Jutro">Jutro</option>
+                        </select>
+                        <div class="invalid-feedback">Wybierz dzień</div>
                     </div>
-                    <div class='form-inline justify-content-around mb-3'>
-                        <div class="form-group">
-                            <select class="custom-select" required>
-                                <option value="">Wybierz..</option>
-                                <option value="1">Dzisiaj</option>
-                                <option value="2">Jutro</option>
-                            </select>
-                            <div class="invalid-feedback">Wybierz dzień</div>
-                        </div>
-                        <div class="form-group">
-                            <select class="custom-select" required>
-                                <option value="">Wybierz...</option>
-                                <option value="1">11:00</option>
-                                <option value="2">11:30</option>
-                                <option value="3">12:00</option>
-                            </select>
-                            <div class="invalid-feedback">Example invalid custom select feedback</div>
-                        </div>
+                    <div class="form-group col-sm-6">
+                        <select class="custom-select" name='Godzina' required>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                        </select>
+                        <div class="invalid-feedback">Example invalid custom select feedback</div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder='Wpisz numer telefonu' name='phone' id="input-phone"  required>
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" name='agree' id="check" required>
-                        <label class="form-check-label" for="exampleCheck1">
-                            <a>Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Dane są
-                                przetwarzane zgodnie z <a href=''>Polityką Prywatności</a>.
-                        </label>
-                    </div>
-                    <div id="form-messages">
-                        
-                    </div>
-                    <button id='submit-button' type="submit" name='submit' class="btn modal-btn btn-primary">Zamów połączenie</button>
-                </form>
-            </div>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder='Wpisz numer telefonu' name='Telefon' id="input-phone"  required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" name='Zgoda' id="check" required>
+                    <label class="form-check-label" for="exampleCheck1">
+                        Twój numer telefonu nie będzie wykorzystywany w celach marketingowych ani przekazany dalej. Dane są
+                            przetwarzane zgodnie z <a href=''>Polityką Prywatności</a>.
+                    </label>
+                </div>
+                <div id="form-messages" class='form-messages'>
+                    
+                </div>
+                <button id='submit-button' type="submit" class="btn modal-btn btn-success">Zamów połączenie</button>
+            </form>
         </div>
-        <div class='actionbtn'>
-            <div class='action'>
-                <i class="fas fa-phone-volume"></i>
-            </div>
+    </div>
+    <div class='actionbtn'>
+        <div class='action'>
+            <i class="fas fa-phone-volume"></i>
         </div>
     </div>
     <footer>
@@ -1133,7 +1133,7 @@
                 </div>
                 <div class="card ml-3 card-calc link text-white">
                     <a href='#wycena'>
-                        <img src="/images/header/wycena.jpg" class="card-img calc"
+                        <img src="/images/header/calc.jpg" class="card-img calc"
                         alt="Kalkulator">
                         <div class="card-img-overlay calc-text text-center">
                             <h1 class="card-title text-uppercase">Darmowa wycena</h1>

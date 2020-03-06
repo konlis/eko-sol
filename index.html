@@ -35,7 +35,7 @@
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#start">Start<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" data-name='start' href="#start">Start<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#o-nas">O Firmie</a>
@@ -45,11 +45,11 @@
                             aria-haspopup="true" aria-expanded="false">
                             Oferta
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item nav-link" href="#fotowoltaika">Fotowoltaika</a>
-                            <a class="dropdown-item nav-link" href="#folie-grzewcze">Folie grzewcze</a>
-                            <a class="dropdown-item nav-link" href="#pompy-ciepla">Pompy Ciepła</a>
-                            <a class="dropdown-item nav-link" href="#termomodernizacja">Termomodernizacja</a>
+                        <div class="dropdown-menu" href="dotacje" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item nav-link" href="fotowoltaika">Fotowoltaika</a>
+                            <a class="dropdown-item nav-link" href="folie-grzewcze">Folie grzewcze</a>
+                            <a class="dropdown-item nav-link" href="pompy-ciepla">Pompy Ciepła</a>
+                            <a class="dropdown-item nav-link" href="termomodernizacja">Termomodernizacja</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -57,24 +57,24 @@
                             Dotacje
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item nav-link" href="#program-czyste-powietrze">Program Czyste Powietrze</a>
-                            <a class="dropdown-item nav-link" href="#program-moj-prad">Program Mój Prąd</a>
+                            <a class="dropdown-item nav-link" href="program-czyste-powietrze">Program Czyste Powietrze</a>
+                            <a class="dropdown-item nav-link" href="program-moj-prad">Program Mój Prąd</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#wspolpraca">Współpraca</a>
+                        <a class="nav-link" href="wspolpraca">Współpraca</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" href="blog">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#kontakt">Kontakt</a>
+                        <a class="nav-link" href="kontakt">Kontakt</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
     <div id='pages'>
-        <section id='start' class='active'>
+        <section id='start' class='content active'>
             <div class='container col-12 justify-content-center'>
                 <div class=''>
                     <div class='deck d-xl-flex'>
@@ -119,7 +119,7 @@
                                             <a href='#program-czyste-powietrze'>
                                                 <button type="button" class="btn">Czyste Powietrze</button>
                                             </a>
-                                            <h1 class='card-title text-uppercase m-0 font-weight-bolder'>Dotacje</h1>
+                                            <h1 class='card-title text-uppercase font-weight-bolder'>Dotacje</h1>
                                             <a href='#program-moj-prad'>
                                                 <button type="button" class="btn">Mój Prąd</button>
                                             </a>
@@ -174,7 +174,7 @@
                 </div>
             </div>
         </section>
-        <section id='o-nas'>
+        <section id='o-nas' class='content'>
             <div class='row'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
@@ -212,18 +212,18 @@
                 </div>
             </div>
         </section>
-        <section id='fotowoltaika'>
+        <section id='fotowoltaika' class='content'>
             <div class='container foto-container'>
                 <div class='row before-title'>
                     <h1>Fotowoltaika</h1>
                 </div>
-                <div class='row py-3'>
+                <div class='row'>
                         <div class="row no-gutters">
                             <div class="col-md-6">
                                 <img src="/images/header/photovoltaic.jpg" class="card-img" alt="Red-Snake">
                             </div>
                             <div class="col-md-6">
-                                <div class="card-body">
+                                <div class="card-body link">
                                     <h5 class="card-title">Co to jest ?</h5>
                                     <p class="card-text card-text-text">
                                         Fotowoltaika to proces wytwarzania energii elektrycznej z darmowego promieniowania słonecznego. Obecnie rozwój tej
@@ -233,6 +233,7 @@
                                         właściwie nie istnieje. Żywotność takiego systemu szacowana jest na <span>co najmniej 25 lat</span> i w całym tym okresie zazwyczaj obowiązuje
                                         gwarancja producenta.
                                     </p>
+                                    <a href='#wycena'><button type="button" class="btn btn-success">Darmowa wycena</button></a>
                                 </div>
                             </div>
                         </div>
@@ -298,12 +299,12 @@
                 </div>
             </div>
         </section>
-        <section id='folie-grzewcze'>
+        <section id='folie-grzewcze' class='content'>
             <div class='container folie'>
                 <div class='row before-title'>
                     <h1>Folie grzewcze <span>RED SNAKE</span></h1>
                 </div>
-                <div class='row py-3'>
+                <div class='row'>
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-md-4">
@@ -375,7 +376,7 @@
                 </div>
             </div>
         </section>
-        <section id='pompy-ciepla'>
+        <section id='pompy-ciepla' class='content'>
             <div class='container foto-container'>
                 <div class='row before-title'>
                     <h1>Pompy ciepła</h1>
@@ -425,7 +426,7 @@
                 </div>
             </div>
         </section>
-        <section id='termomodernizacja'>
+        <section id='termomodernizacja' class='content'>
             <div class='container termo'>
                 <div class='row before-title'>
                     <h1>Termomodernizacja</h1>
@@ -608,7 +609,7 @@
                 </div>
             </div>
         </section>
-        <section id='program-czyste-powietrze'>
+        <section id='program-czyste-powietrze' class='content'>
             <div class='container air'>
                 <div class='row before-title'>
                     <h1>Program Czyste Powietrze</h1>
@@ -720,7 +721,7 @@
                 </div>
             </div>
         </section>
-        <section id='program-moj-prad'>
+        <section id='program-moj-prad' class='content'>
             <div class='container prad'>
                 <div class='row before-title'>
                     <h1>Program Mój Prąd</h1>
@@ -773,7 +774,7 @@
                 </div>
             </div>
         </section>
-        <section id='wspolpraca'>
+        <section id='wspolpraca' class='content'>
             <div class='row'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
@@ -795,7 +796,7 @@
                 </div>
             </div>
         </section>
-        <section id='kontakt'>
+        <section id='kontakt' class='content'>
             <div class='container form-container col-12'>
                 <div class='row'>
                     <div class='card-deck my-5 col-12 d-md-flex'>
@@ -835,17 +836,7 @@
                                 </div>
                                 <button id='submit-button' type="submit" name='submit' class="btn btn-success">Wyślij</button>
                             </form> -->
-                            <form class="contact__form col-12 col-xl-8 justify-content-center" method="post" action="https://formspree.io/xzbrygzg">
-                                <!-- Starting of successful form message -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                            Your message was sent successfully.
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Ending of successful form message -->
-                                <!-- Element of the ajax contact form -->
+                            <form id="contact" class="contact-form col-12 col-xl-8 justify-content-center" method="post" action="https://formspree.io/xzbrygzg">
                                 <div class="row">
                                     <div class="col-12 form-group">
                                         <input name="Imie" type="text" class="form-control" placeholder="Imię i nazwisko" required>
@@ -857,14 +848,15 @@
                                         <input name="Email" type="email" class="form-control" placeholder="Email" required>
                                     </div>
                                     <div class="col-12 form-group">
-                                        <input name="Telefon" type="text" class="form-control" placeholder="Telefon" required>
+                                        <input name="Telefon" type="number" class="form-control" placeholder="Telefon" required>
                                     </div>
                                     <div class="col-12 form-group">
                                         <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
                                     </div>
-                                    <div class="col-12 form-group">
-                                        <input type="submit" class="btn btn-success" value="Wyślij wiadomość">
+                                    <div id="form-contact" class='form-messages'>
+                                    
                                     </div>
+                                    <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
                                 </div>
                             </form>
                         </div>
@@ -878,7 +870,7 @@
                 </div>    
             </div>       
         </section>
-        <section id='blog'>
+        <section id='blog' class='content'>
             <div class='container blog foto-container'>
                 <div class='row before-title'>
                     <h1>Blog</h1>
@@ -905,7 +897,7 @@
                 </div>
             </div>
         </section>
-        <section id='blog/nalepsza-lokata'>
+        <section id='blog/nalepsza-lokata' class='content'>
             <div class='container blog foto-container'>
                 <div class='row before-title'>
                     <h1>Blog</h1>
@@ -931,9 +923,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section id='wycena'>
+        </section>  
+        <section id='wycena' class='content'>
             <div class='row wycena'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
@@ -949,20 +940,21 @@
                             Wypełnij formularz poniżej, a w ciągu paru dni wycenimy dla Ciebie całkowity koszt inwestycji ZA DARMO.
                         </h5>
                     </div>
-                    <form id="wycena-contact" class='contact-form' action="https://formspree.io/xoqwpnwj" method="POST">
-                        
-                        <div class='form-row'>
-                            <div class="form-group col-md-4">
+                    <form id="wycena-contact" class='contact-form' action="https://formspree.io/xoqwpnwj" method="POST"> 
+                    <!-- <div class='form-row'> -->
+                        <div class='form-group '>
+                            <div class="form-group">
                                 <label for="moc">Sposób wyliczenia:</label>
                                 <select name='Moc/Rachunki' class="custom-select mb-2" required>
                                     <option value="">Wybierz..</option>
                                     <option value="Rachunki">Średnio mięsięczne rachunki za prąd</option>
                                     <option value="Moc KW">Wielkość instalacji KW</option>
                                 </select>
-                                <input type="number" class="form-control" placeholder='Wpisz kwotę lub moc KW' name='KW / PLN' id="input-dana" required>
+                                <input type="text" pattern="\d*" maxlength="4" class="form-control" placeholder='Wpisz liczbę' name='kwpln' id="moc" required>
                                 <div class="invalid-feedback">Wybierz sposób</div>
+                                <span id="numloc"></span><br />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="dach-rodzaj">Jakim materiałem pokryty jest dach ?</label>
                                 <select name='Poszycie' class="custom-select" required>
                                     <option value="">Wybierz rodzaj poszycia</option>
@@ -970,9 +962,8 @@
                                     <option value="Dachówka betonowa/ceramiczna">Dachówka betonowa/ceramiczna</option>
                                     <option value="Gont">Gont/papa</option>
                                 </select>
-                                <div class="invalid-feedback">Example invalid custom select feedback</div>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="dach-rodzaj">Gdzie będzie montowana instalacja ?</label>
                                 <select name='Montaz' class="custom-select" required>
                                     <option value="">Wybierz rodzaj montażu</option>
@@ -983,12 +974,12 @@
                                 <div class="invalid-feedback">Wybierz gdzie będzie montowana instalacja.</div>
                             </div>
                         </div>
-                        <div class='form-row'>
-                            <div class="form-group col-md-4">
+                        <div class='form-group '>
+                            <div class="form-group">
                                 <label for="adres">Adres</label>
                                 <input type="text" class="form-control" placeholder='ul. Słoneczna 7' name='Adres' id="input-name" required>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="inputState">Województwo</label>
                                 <select id="inputState" name='Wojewodztwo' class="form-control">
                                     <option value="">Wybierz...</option>
@@ -997,23 +988,31 @@
                                     <option value='Świętokrzyskie'>Świętokrzyskie</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group">
                                 <label for="inputZip">Kod pocztowy</label>
-                                <input type="text" name='Kod' placeholder='55-605' class="form-control" id="inputZip">
+                                <input type="text" name='Kod' pattern="[0-9]{2}-[0-9]{3}" placeholder='55-605' class="form-control" id="inputZip">
                             </div>
+                           
+                            
                         </div>
-                        <div class='form-row'>
-                            <div class="form-group col-md-6">
+                    <!-- </div> -->
+                    <!-- <div class='form-row'> -->
+                        <div class='form-group'>
+                            <div class="form-group">
                                 <label for="phone">Nr telefonu</label>
-                                <input type="number" class="form-control" placeholder='123456789' name='Telefon' id="input-phone"
+                                <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="form-control" placeholder='123-456-789' name='Telefon' id="Telefon"
                                     required>
                             </div>
-                            <div class="form-group col-md-6">
+                        </div>
+                        <div class='form-group'>
+                            <div class="form-group">
                                 <label for="imie">Imię i nazwisko</label>
                                 <input type="text" class="form-control" placeholder='Jan Kowalski' name='Imie' id="input-name" required>
                             </div>
                         </div>
-                        <div class="form-group form-check">
+                    <!-- </div> -->
+                    <!-- <div class='form-row'> -->
+                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" name='Zgoda' id="check" required>
                             <label class="form-check-label" for="exampleCheck1">
                                 <a>Twóje dane nie będą wykorzystywane w celach marketingowych ani przekazywane dalej. Potrzebujemy ich tylko do
@@ -1021,6 +1020,7 @@
                                 przetwarzane zgodnie z <a href=''>Polityką Prywatności</a>.
                             </label>
                         </div>
+                    <!-- </div> -->
                         <div id="wycena-status" class='form-messages'>
                             
                         </div>
@@ -1029,7 +1029,7 @@
                 </div>
             </div>
         </section>
-        <section id='modernizacja'>
+        <section id='modernizacja' class='content'>
             <div class='row moderation-image'>
                 <img src='/images/header/construction.jpg'>
             </div>
