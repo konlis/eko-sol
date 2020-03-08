@@ -2,65 +2,84 @@
 
 /*Change pages without reloading*/
 
-const navlinks = document.querySelectorAll('.navbar-nav a'),
-    link = document.querySelectorAll('.link a'),
-    content = document.querySelectorAll('section'),
-    pages = Array.from(document.querySelector('#pages').children);
+function changePages () {
 
-    document.addEventListener('DOMContentLoaded', () => {
-    history.pushState(null, null, null)
+    this.pages = Array.from(document.querySelector('#pages').children);
+    this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
+    this.buttons = Array.from(document.querySelectorAll('.link a'));
+
+    let pagesMatchingHash = [];
+
+    if (window.location.hash.length > 2) {
+        const idFromHash = window.location.hash.replace('#/','');
+        console.log('idFromHash', idFromHash);
+
+        pagesMatchingHash = this.pages.filter(function (page) {
+            return page.id == idFromHash;
+        });
+        console.log('pagesMatchingHash', pagesMatchingHash);
+    }
+    //history.pushState(page.id, null, null);
+    this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
+
+    for (let link of this.navLinks) {
+        link.addEventListener('click', function (event) {
+            window.onpopstate = checkState;
+            const clickedElement = this;
+            event.preventDefault();
+            /* TODO: get page id from href */
+            const id = clickedElement.getAttribute('href').replace('#', '');
+            //console.log('id', id)
+            /* TODO: activate page */
+            
+            activatePage(id);
+            history.pushState(id, null, id);
+        });
+    }
+
+    for (let link of this.buttons) {
+        link.addEventListener('click', function (event) {
+            window.onpopstate = checkState;
+            const clickedElement = this;
+            event.preventDefault();
+            /* TODO: get page id from href */
+            const id = clickedElement.getAttribute('href').replace('#', '');
+            /* TODO: activate page */
+            
+            activatePage(id);
+            history.pushState(id, null, null);
+        });
     
-    for (let navlink of navlinks) {
-        navlink.addEventListener('click', currentHref);
     }
-
-    window.addEventListener('hashchange', haschChange);
-    window.addEventListener('popstate', popstate);
-});
-
-
-    function currentHref(ev) {
-        ev.preventDefault();
-            let href = ev.currentTarget.href;
-            console.log(href, 'href');
-
-            for (let page of pages) {
-
-
-            
-            if (page.getAttribute('id') == href) {
-                page.classList.toggle('active');
-            }
-       
+    function checkState(e) {
+        // page reload
+        if (e.state) {
+            console.log(e.state.id);
+            //activatePage(state.id);
         }
-            //show();
     }
+}
 
-    function haschChange(ev) {
-        console.log(ev)
-        //show(e);
+function activatePage (pageId) {
+
+
+
+    for (let link of this.navLinks) {
+        link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
+        //console.log('link', link);
     }
+    for (let page of this.pages) {
+        page.classList.toggle('active', page.id == pageId);
+        //console.log('page', page);
+        
+    }
+    
+    window.location.hash = '#' + pageId;
+    //console.log('hash', window.location.hash);
+    
+}
 
-    function popstate(e) {
-    console.log(e)
-    //show(e);
-    }   
-
-    // function show() {
-    //     for (let page of pages) {
-            
-            
-    //         console.log('page', page);
-    //         if (page.getAttribute('id') !== currentHref(show)) {
-    //             page.classList.remove('active');
-    //         }
-    //         else {
-    //              page.classList.add('active')
-    //         }
-    //     }
-    // }
-
-
+changePages();
 
 /*Contact form*/
 
@@ -186,28 +205,12 @@ function ajax(method, url, data, success, error) {
     xhr.send(data);
 }
 
-
-// const tabs = 
-// $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-//     console.log("tab shown...");
-//     localStorage.setItem('activeTab', $(e.target).attr('href'));
-// });
-
-// // read hash from page load and change tab
-// var activeTab = localStorage.getItem('activeTab');
-// if (activeTab) {
-//     $('.nav-tabs a[href="' + activeTab + '"]').tab('show');
-//     console.log("tab ", activeTab);
-// }
-
 /*Dynamic Contact form*/
 
     
 window.onload = function(){
 
     function toggleModal() {
-        
-        //const form = document.querySelector('.modal-content');
         
         const modal = document.querySelector('.dynamicForm');
 
@@ -219,14 +222,6 @@ window.onload = function(){
 
     btn.addEventListener('click', toggleModal);
     closeForm.addEventListener('click', toggleModal);
-
-// closeModal(e);
-//     function closeModal(e) {
-//     if (e.target.modal != 'modal') {
-//         closeForm.addEventListener('click', toggleModal);
-//         console.log(target, 'target')
-//     }
-// }
     
 }
 

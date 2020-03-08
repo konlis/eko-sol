@@ -1,0 +1,3 @@
+
+
+$('a[data-pjax]').pjax()

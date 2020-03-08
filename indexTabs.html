@@ -26,30 +26,30 @@
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 <div class='nav-logo link'>
-                    <a class='navbar-brand' href="#start"><img src='/images/logo-slider/eco-sol small2.png'></a>
+                    <a class='navbar-brand' href="#"><img src='/images/logo-slider/eco-sol small2.png'></a>
                 </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <div class='nav-logo link'>
-                    <a class='navbar-brand  navbar-brand-logo' href="#start"><img src='/images/logo-slider/eco-sol small2.png'></a>
+                    <a class='navbar-brand  navbar-brand-logo' href="#"><img src='/images/logo-slider/eco-sol small2.png'></a>
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#start">Start<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" data-tab-for='start' href="#">Start<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#o-nas">O Firmie</a>
+                        <a class="nav-link" data-tab-for='o-nas' href="#">O Firmie</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             Oferta
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item nav-link" href="#fotowoltaika">Fotowoltaika</a>
-                            <a class="dropdown-item nav-link" href="#folie-grzewcze">Folie grzewcze</a>
-                            <a class="dropdown-item nav-link" href="#pompy-ciepla">Pompy Ciepła</a>
-                            <a class="dropdown-item nav-link" href="#termomodernizacja">Termomodernizacja</a>
+                        <div class="dropdown-menu" href="dotacje" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item nav-link" data-tab-for='fotowoltaika' href="#">Fotowoltaika</a>
+                            <a class="dropdown-item nav-link" data-tab-for='folie-grzewcze' href="#">Folie grzewcze</a>
+                            <a class="dropdown-item nav-link" data-tab-for='pompy-ciepla' href="#">Pompy Ciepła</a>
+                            <a class="dropdown-item nav-link" data-tab-for='termomodernizacja' href="#">Termomodernizacja</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -57,30 +57,30 @@
                             Dotacje
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item nav-link" href="#program-czyste-powietrze">Program Czyste Powietrze</a>
-                            <a class="dropdown-item nav-link" href="#program-moj-prad">Program Mój Prąd</a>
+                            <a class="dropdown-item nav-link" data-tab-for='program-czyste-powietrze' href="#">Program Czyste Powietrze</a>
+                            <a class="dropdown-item nav-link" data-tab-for='program-moj-prad' href="#">Program Mój Prąd</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#wspolpraca">Współpraca</a>
+                        <a class="nav-link" data-tab-for='wspolpraca' href="#">Współpraca</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
+                        <a class="nav-link" data-tab-for='blog' href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#kontakt">Kontakt</a>
+                        <a class="nav-link" data-tab-for='kontakt' href="#">Kontakt</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
     <div id='pages'>
-        <section id='start' class='active'>
+        <section id='start' class='content active'>
             <div class='container col-12 justify-content-center'>
                 <div class=''>
                     <div class='deck d-xl-flex'>
                         <div class='card-deck col-12 col-xl-6 '>
                             <div class='card link p-0  card-header'>
-                                <a href='#fotowoltaika'>
+                                <a  data-tab-for='fotowoltaika' href='#fotowoltaika'>
                                     <img src='/images/header/Fotowoltaikab.jpeg' class='card-img'>
                                     <div class='card-img-overlay px-0'>
                                         <div class='card-body px-0 card-header-text text-center'>
@@ -90,7 +90,7 @@
                                 </a>
                             </div>
                             <div class='card link p-0  card-header'>
-                                <a href='#folie-grzewcze'>
+                                <a data-tab-for='folie-grzewcze' href='#folie-grzewcze'>
                                     <img src='images/red-snake/folia-red.jpg' class='card-img'>
                                     <div class='card-img-overlay px-0'>
                                         <div class='card-body card-header-text px-0 text-center'>
@@ -102,7 +102,7 @@
                         </div>
                         <div class='card-deck col-12 col-xl-6'>
                             <div class='card link p-0 card-header'>
-                                <a href='#termomodernizacja'>
+                                <a data-tab-for='termomodernizacja' href='#termomodernizacja'>
                                     <img src='images/header/termo.jpeg' class='card-img'>
                                     <div class='card-img-overlay px-0'>
                                         <div class='card-body card-header-text px-0 text-center'>
@@ -112,15 +112,15 @@
                                 </a>
                             </div>
                             <div class='card  p-0 link card-header'>
-                                <a href='#dotacje'>
+                                <a >
                                     <img src='images/header/grant.jpeg' class='card-img'>
                                     <div class='card-img-overlay px-0'>
                                         <div class='card-body px-0 card-header-text text-center link'>
-                                            <a href='#program-czyste-powietrze'>
+                                            <a data-tab-for='czyste-powietrze' href='#czyste-powietrze'>
                                                 <button type="button" class="btn">Czyste Powietrze</button>
                                             </a>
                                             <h1 class='card-title text-uppercase font-weight-bolder'>Dotacje</h1>
-                                            <a href='#program-moj-prad'>
+                                            <a data-tab-for='moj-prad' href='#moj-prad'>
                                                 <button type="button" class="btn">Mój Prąd</button>
                                             </a>
                                         </div>
@@ -174,7 +174,7 @@
                 </div>
             </div>
         </section>
-        <section id='o-nas'>
+        <section id='o-nas' class='content'>
             <div class='row'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
@@ -212,7 +212,7 @@
                 </div>
             </div>
         </section>
-        <section id='fotowoltaika'>
+        <section id='fotowoltaika' class='content'>
             <div class='container foto-container'>
                 <div class='row before-title'>
                     <h1>Fotowoltaika</h1>
@@ -299,7 +299,7 @@
                 </div>
             </div>
         </section>
-        <section id='folie-grzewcze'>
+        <section id='folie-grzewcze' class='content'>
             <div class='container folie'>
                 <div class='row before-title'>
                     <h1>Folie grzewcze <span>RED SNAKE</span></h1>
@@ -376,7 +376,7 @@
                 </div>
             </div>
         </section>
-        <section id='pompy-ciepla'>
+        <section id='pompy-ciepla' class='content'>
             <div class='container foto-container'>
                 <div class='row before-title'>
                     <h1>Pompy ciepła</h1>
@@ -426,7 +426,7 @@
                 </div>
             </div>
         </section>
-        <section id='termomodernizacja'>
+        <section id='termomodernizacja' class='content'>
             <div class='container termo'>
                 <div class='row before-title'>
                     <h1>Termomodernizacja</h1>
@@ -609,7 +609,7 @@
                 </div>
             </div>
         </section>
-        <section id='program-czyste-powietrze'>
+        <section id='program-czyste-powietrze' class='content'>
             <div class='container air'>
                 <div class='row before-title'>
                     <h1>Program Czyste Powietrze</h1>
@@ -721,7 +721,7 @@
                 </div>
             </div>
         </section>
-        <section id='program-moj-prad'>
+        <section id='program-moj-prad' class='content'>
             <div class='container prad'>
                 <div class='row before-title'>
                     <h1>Program Mój Prąd</h1>
@@ -774,7 +774,7 @@
                 </div>
             </div>
         </section>
-        <section id='wspolpraca'>
+        <section id='wspolpraca' class='content'>
             <div class='row'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
@@ -796,7 +796,7 @@
                 </div>
             </div>
         </section>
-        <section id='kontakt'>
+        <section id='kontakt' class='content'>
             <div class='container form-container col-12'>
                 <div class='row'>
                     <div class='card-deck my-5 col-12 d-md-flex'>
@@ -870,7 +870,7 @@
                 </div>    
             </div>       
         </section>
-        <section id='blog'>
+        <section id='blog' class='content'>
             <div class='container blog foto-container'>
                 <div class='row before-title'>
                     <h1>Blog</h1>
@@ -897,7 +897,7 @@
                 </div>
             </div>
         </section>
-        <section id='blog/nalepsza-lokata'>
+        <section id='blog/nalepsza-lokata' class='content'>
             <div class='container blog foto-container'>
                 <div class='row before-title'>
                     <h1>Blog</h1>
@@ -923,9 +923,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section id='wycena'>
+        </section>  
+        <section id='wycena' class='content'>
             <div class='row wycena'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
@@ -1030,7 +1029,7 @@
                 </div>
             </div>
         </section>
-        <section id='modernizacja'>
+        <section id='modernizacja' class='content'>
             <div class='row moderation-image'>
                 <img src='/images/header/construction.jpg'>
             </div>

@@ -1,65 +1,51 @@
-/* eslint-disable no-undef */
+var tabs = document.querySelectorAll("a[data-tab-for]");
+var contents = Array.from(document.querySelector('#pages').children);
+var cardLinks = Array.from(document.querySelectorAll('.card-header a'));
 
-/*Change pages without reloading*/
 
-function changePages () {
+console.log({tabs, contents, cardLinks})
 
-    this.pages = Array.from(document.querySelector('#pages').children);
-    this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
-    this.buttons = Array.from(document.querySelectorAll('.link a'));
+tabs.forEach(tab => tab.addEventListener('click', tabClicked));
+window.onpopstate = checkState;
 
-    let pagesMatchingHash = [];
+history.replaceState({
+    tabForId: tabs[0].dataset.tabFor 
+}, tabs[0], tabs[0].dataset.tabFor); 
 
-    if (window.location.hash.length > 2) {
-        const idFromHash = window.location.hash.replace('#/','');
-        console.log('idFromHash', idFromHash);
+function showContent(id) {
+    contents.forEach(content => {
+        
+        if (content.getAttribute('id') === id) content.classList.add('active');
+        else content.classList.remove('active');
+    });
 
-        pagesMatchingHash = this.pages.filter(function (page) {
-            return page.id == idFromHash;
-        });
-        console.log('pagesMatchingHash', pagesMatchingHash);
-    }
-    this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
+    tabs.forEach(tab => {
+       // console.log(tab,'tab')
+        if (tab.dataset.tabFor === id) tab.classList.remove("active");
+        else tab.classList.add("active");
+    });
 
-    for (let link of this.navLinks) {
-        link.addEventListener('click', function (event) {
-            const clickedElement = this;
-            event.preventDefault();
-            /* TODO: get page id from href */
-            const id = clickedElement.getAttribute('href').replace('#', '');
-            console.log('id', id)
-            /* TODO: activate page */
-            activatePage(id);
-        });
-    }
+}
 
-    for (let link of this.buttons) {
-        link.addEventListener('click', function (event) {
-            const clickedElement = this;
-            event.preventDefault();
-            /* TODO: get page id from href */
-            const id = clickedElement.getAttribute('href').replace('#', '');
-            /* TODO: activate page */
-            activatePage(id);
-        });
+function tabClicked(e) {
+    var contentId = e.target.dataset.tabFor;
+    console.log(contentId, 'content');
+    e.preventDefault();
+    showContent(contentId);
+    history.pushState({
+        tabForId: contentId
+    }, null, contentId);
+}
+
+function checkState(e) {
+    // page reload
+    if (e.state) {
+        console.log(e.state.tabForId);
+        showContent(e.state.tabForId);
     }
 }
 
-function activatePage (pageId) {
 
-    for (let link of this.navLinks) {
-        link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
-        //console.log('link', link);
-    }
-    for (let page of this.pages) {
-        page.classList.toggle('active', page.id == pageId);
-        //console.log('page', page);
-    }
-    window.location.hash = '#/' + pageId;
-    //console.log('hash', window.location.hash);
-}
-
-changePages();
 
 /*Contact form*/
 
@@ -70,7 +56,7 @@ window.addEventListener("DOMContentLoaded", function () {
     //var button = document.getElementById("submit-button");
     var status = document.getElementById("form-messages");
 
-   // Success and Error functions for after the form is submitted
+    // Success and Error functions for after the form is submitted
 
     // function validate() {
     //     var num = document.form.kwpln.value;
@@ -168,7 +154,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
- // helper function for sending an AJAX request
+// helper function for sending an AJAX request
 
 function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest();
@@ -185,29 +171,13 @@ function ajax(method, url, data, success, error) {
     xhr.send(data);
 }
 
-
-// const tabs = 
-// $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-//     console.log("tab shown...");
-//     localStorage.setItem('activeTab', $(e.target).attr('href'));
-// });
-
-// // read hash from page load and change tab
-// var activeTab = localStorage.getItem('activeTab');
-// if (activeTab) {
-//     $('.nav-tabs a[href="' + activeTab + '"]').tab('show');
-//     console.log("tab ", activeTab);
-// }
-
 /*Dynamic Contact form*/
 
-    
-window.onload = function(){
+
+window.onload = function () {
 
     function toggleModal() {
-        
-        //const form = document.querySelector('.modal-content');
-        
+
         const modal = document.querySelector('.dynamicForm');
 
         modal.classList.toggle('modal-hidden');
@@ -219,14 +189,4 @@ window.onload = function(){
     btn.addEventListener('click', toggleModal);
     closeForm.addEventListener('click', toggleModal);
 
-// closeModal(e);
-//     function closeModal(e) {
-//     if (e.target.modal != 'modal') {
-//         closeForm.addEventListener('click', toggleModal);
-//         console.log(target, 'target')
-//     }
-// }
-    
 }
-
-
