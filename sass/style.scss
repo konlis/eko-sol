@@ -51,6 +51,7 @@ body {
     padding-right: .5rem;
     margin-left: -10px;
     margin-right: -10px;
+    justify-content: center;
 }
 .container {
     background-color: white;
@@ -384,7 +385,6 @@ footer .card-text:hover {
         color: $body-color-blue;
     }
     .card {
-        background-color: $body-color-green-op;
         border-radius: 0;
     }
 }
@@ -409,10 +409,13 @@ footer .card-text:hover {
 }
 .second-icons-row   {
     .card-cards .card {
-        background-color: $body-color-blue-op;
         border-radius: 0;
         i {
             color: $body-color-green;
+            font-size: 40px;
+        }
+        .card-body {
+        text-align: center;
         }
     }
     .cards-title i {
@@ -488,6 +491,10 @@ footer .card-text:hover {
 .termo h1:first-of-type {
     word-break: break-all;
 }
+.termo .row {
+    justify-content: left;
+}
+
 
 /*Badania*/
 
@@ -753,6 +760,12 @@ button:active {
 }
 .modal-content .btn {
     background-color: $body-color-green;
+}
+
+/*Blog*/ 
+
+.blog .row {
+    justify-content: left;
 }
 
 /*Wycena*/

@@ -33,6 +33,8 @@ body {
   padding-right: .5rem;
   margin-left: -10px;
   margin-right: -10px;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .container {
@@ -336,7 +338,6 @@ footer .card-text:hover {
 }
 
 .first-icons-row .card-cards .card {
-  background-color: rgba(39, 174, 95, 0.192);
   border-radius: 0;
 }
 
@@ -366,12 +367,16 @@ footer .card-text:hover {
 }
 
 .second-icons-row .card-cards .card {
-  background-color: rgba(41, 127, 185, 0.205);
   border-radius: 0;
 }
 
 .second-icons-row .card-cards .card i {
   color: #27ae60;
+  font-size: 40px;
+}
+
+.second-icons-row .card-cards .card .card-body {
+  text-align: center;
 }
 
 .second-icons-row .cards-title i {
@@ -462,6 +467,11 @@ footer .card-text:hover {
 /*Termomodernizacja*/
 .termo h1:first-of-type {
   word-break: break-all;
+}
+
+.termo .row {
+  -ms-flex-pack: left;
+      justify-content: left;
 }
 
 /*Badania*/
@@ -748,6 +758,12 @@ button:active {
 
 .modal-content .btn {
   background-color: #27ae60;
+}
+
+/*Blog*/
+.blog .row {
+  -ms-flex-pack: left;
+      justify-content: left;
 }
 
 /*Wycena*/

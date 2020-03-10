@@ -74,7 +74,7 @@
         </nav>
     </header>
     <div id='pages'>
-        <section id='start' class='active'>
+        <section id='start' class='active content'>
             <div class='container col-12 justify-content-center'>
                 <div class=''>
                     <div class='deck d-xl-flex'>
@@ -174,7 +174,7 @@
                 </div>
             </div>
         </section>
-        <section id='o-nas'>
+        <section id='o-nas' class='content'>
             <div class='row'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
@@ -210,6 +210,36 @@
                         <h5 class='text-center py-5 text-uppercase font-weight-bolder'>Chcesz wiedzieć więcej? Serdecznie zapraszamy do kontaktu.</h5>
                     </div>
                 </div>
+                <div class='row justify-content-center mb-5'>
+                    <div class='card'>
+                        <h5 class='title-text text-center pb-3 text-uppercase'>
+                            Skontaktuj sie z nami
+                        </h5>
+                        <form id="contact" class="contact-form " method="post" action="https://formspree.io/xzbrygzg">
+                            <div class="row">
+                                <div class='form-row col-12'>
+                                    <div class="form-group col-6">
+                                        <input name="Imie" type="text" class="form-control" placeholder="Imię i nazwisko" required>
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <input name="Email" type="email" class="form-control" placeholder="Email"
+                                            aria-describedby="emailHelp" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość"
+                                        required></textarea>
+                                </div>
+                                <div id="form-contact" class='form-messages'>
+                
+                                </div>
+                                <div class="col-12 form-group">
+                                    <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         <section id='fotowoltaika'>
@@ -226,12 +256,13 @@
                                 <div class="card-body link">
                                     <h5 class="card-title">Co to jest ?</h5>
                                     <p class="card-text card-text-text">
-                                        Fotowoltaika to proces wytwarzania energii elektrycznej z darmowego promieniowania słonecznego. Obecnie rozwój tej
-                                        gałęzi technologii następuję bardzo dynamicznie, a słońce stanowi trzecie co do wielkości źródło energii odnawialnej na
-                                        świecie. Prąd produkuje się sam. Może być zużywany w czasie rzeczywistym w gospodarstwie lub przekazywany na zasadzie
-                                        odsprzedaży do sieci. Wszystko dzieje się automatycznie, bez naszej ingerencji i zaangażowania. Do tego ryzyko awarii
-                                        właściwie nie istnieje. Żywotność takiego systemu szacowana jest na <span>co najmniej 25 lat</span> i w całym tym okresie zazwyczaj obowiązuje
-                                        gwarancja producenta.
+                                        Fotowoltaika to proces nie emisyjnego wytwarzania energii elektrycznej z darmowego promieniowania słonecznego.
+                                        Dynamiczny rozwój fotowoltaiki jest możliwy dzięki stale obniżającym się kosztom technologii. W latach 2010-2018
+                                        średnioważony koszt produkcji energii elektrycznej z PV na świecie spadł o 77% a energia słoneczna stanowi trzecie co do
+                                        wielkości źródło energii odnawialnej na świecie. Prąd produkuje się sam. Może być zużywany w czasie rzeczywistym w
+                                        gospodarstwie lub przekazywany na zasadzie magazynowania do sieci. Wszystko dzieje się automatycznie, bez naszej
+                                        ingerencji i zaangażowania. Do tego ryzyko awarii właściwie nie istnieje. Żywotność takiego systemu szacowana jest na co
+                                        najmniej 25 lat i potwierdzony jest długimi gwarancjami producenta.
                                     </p>
                                     <a href='#wycena'><button type="button" class="btn btn-success">Darmowa wycena</button></a>
                                 </div>
@@ -252,7 +283,7 @@
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
                         <div class='card-cards pt-3'>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="fas fa-coins"></i>
                                 </div>
@@ -261,7 +292,7 @@
                                     <p class="card-text">Całkowity koszt energii elektrycznej uzyskiwanej ze słońca to 0 zł.</p>
                                 </div>
                             </div>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
@@ -270,7 +301,7 @@
                                     <p class="card-text">Instalacja fotowoltaiczna ma długi okres gwarancji sięgający 25 lat.</p>
                                 </div>
                             </div>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="far fa-lightbulb"></i>
                                 </div>
@@ -279,7 +310,7 @@
                                     <p class="card-text">Własny prąd przez 24h na dobę.</p>
                                 </div>
                             </div>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="fas fa-lock"></i>
                                 </div>
@@ -291,60 +322,63 @@
                         </div>
                     </div>
                 </div>
-                <div class='row row-cards'>
+                <div class='row'>
+                    <p class='pt-5'>Rządowe dotacje oraz ulgi sprawiają że inwestycja w
+                        fotowoltaikę jest jeszcze bardziej opłacalne. Zwrot inwestycji to
+                        około 5 lat co daje 20% zarobku rocznie. Czy warto wiec trzymać swoje pieniądze na niskooprocentowanych lokatach
+                        bankowych ? Oprócz dużej oszczędności na prądzie zabezpieczamy się na przyszłość przed wzrostem cen czy na czas
+                        emerytalny.</p>
+                </div>
+                <div class='row mb-5 row-cards'>
                     <div class="card second-icons-row">
                         <div class='cards-title'>
                             <i class="fas fa-ellipsis-h"></i>
                             <h5>Dlaczego warto nas wybrać ? </h5>
                             <i class="fas fa-ellipsis-h"></i>
                         </div>
-                        <div class='card-cards with-icons pt-3'>
-                            <div class="card" style="max-width: 18rem;">
+                        <div class='card-cards width-icons pt-3'>
+                            <div class="card" >
                                 <div class="card-body folie-body-icon">
                                     <i class="fas fa-fighter-jet"></i>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Szybki montaż</h5>
+                                    <h6 class="card-title">Szybki montaż</h6>
                                 </div>
                             </div>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="fas fa-hard-hat"></i>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Profesjonalne wykonanie</h5>
+                                    <h6 class="card-title">Profesjonalne wykonanie</h6>
                                 </div>
                             </div>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="far fa-eye"></i>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Monitoring instalacji</h5>
+                                    <h6 class="card-title">Monitoring instalacji</h6>
                                 </div>
                             </div>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="fas fa-list-ul"></i>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Kompleksowość usługi</h5>
+                                    <h6 class="card-title">Kompleksowość usługi</h6>
                                 </div>
                             </div>
-                            <div class="card" style="max-width: 18rem;">
+                            <div class="card">
                                 <div class="card-body folie-body-icon">
                                     <i class="fas fa-hands"></i>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Opieka posprzedażowa</h5>
+                                    <h6 class="card-title">Opieka posprzedażowa</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class='row'>
-                    <h5 class='text-center py-5 text-uppercase font-weight-bolder'>Rządowe dotacje oraz ulgi podatkowe sprawiają że
-                        Twoja instalacja zwróci się już w 4 -5 lat.</h5>
                 </div>
             </div>
         </section>
@@ -836,12 +870,40 @@
                 <div class='container'>
                     <div class='card-body'>
                         <p>
-                            Jeśli jesteś zainteresowany rozwiązaniami bezpiecznymi dla środowiska, ekologicznymi, a przy tym pozwalającymi Ci
-                            zaoszczędzić pieniądze, zwiększyć codzienny komfort oraz poprawić zdrowie zarówno swojej rodziny, jak i otaczających Cię
-                            osób koniecznie skontaktuj się z nami telefonicznie, e-mailowo lub przez formularz kontaktowy!
+                            Jeśli jesteś zainteresowany sprzedażą naszych produktów bądź jesteś wykwalifikowanym monterem instalacji
+                            fotowoltaicznych koniecznie z skontaktuj się z Nami by poznać szczegóły współpracy.
                         </p>
-                        <h5 class='text-center py-5 font-weight-bolder'>CHĘTNIE NAWIĄŻEMY Z TOBĄ WSPÓŁPRACĘ, GWARANTUJĄC FACHOWĄ POMOC I WYKONANIE INWESTYCJI OD A DO Z.</h5>
+                        <h5 class='text-center pt-5 font-weight-bolder'>Poleć nas znajomym, sąsiadom, rodzinie i zyskaj 300 zł oraz osobie polecanej zniżkę 200 zł na instalację fotowoltaiczną.</h5>
                     </div>
+                </div>
+            </div>
+            <div class='row justify-content-center my-5'>
+                <div class='card'>
+                    <h5 class='title-text text-center pb-3 text-uppercase'>
+                        Skontaktuj sie z nami
+                    </h5>
+                    <form id="contact" class="contact-form " method="post"
+                        action="https://formspree.io/xzbrygzg">
+                        <div class="row">
+                            <div class='form-row col-12'>
+                                <div class="form-group col-6">
+                                    <input name="Imie" type="text" class="form-control" placeholder="Imię i nazwisko" required>
+                                </div>
+                                <div class="form-group col-6">
+                                    <input name="Email" type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp" required>
+                                </div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
+                            </div>
+                            <div id="form-contact" class='form-messages'>
+                    
+                            </div>
+                            <div class="col-12 form-group">
+                                <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -850,9 +912,9 @@
                 <div class='row'>
                     <div class='card-deck my-5 col-12 d-md-flex'>
                         <div class='card form-card'>
-                            <h1 class='title-text'>
+                            <h5 class='title-text text-uppercase pb-3'>
                                 Skontaktuj sie z nami
-                            </h1>
+                            </h5>
                             <!-- <form id="ajax-contact" class='contact-form' action="contactform.php" method="POST">
                                 <div class="form-group">
                                     <label for="input-name">Imię i nazwisko</label>
@@ -894,10 +956,10 @@
                                         <input name="Miejscowosc" text" class="form-control" placeholder="Miejscowość">
                                     </div>
                                     <div class="col-12 form-group">
-                                        <input name="Email" type="email" class="form-control" placeholder="Email" required>
+                                        <input name="Email" type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp" required>
                                     </div>
                                     <div class="col-12 form-group">
-                                        <input name="Telefon" type="number" class="form-control" placeholder="Telefon" required>
+                                        <input name="Telefon" type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="form-control" placeholder="123-456-789" required>
                                     </div>
                                     <div class="col-12 form-group">
                                         <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
@@ -1128,7 +1190,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="number" class="form-control" placeholder='Wpisz numer telefonu' name='Telefon' id="input-phone"  required>
+                    <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="123-456-789" placeholder='123-456-789' name='Telefon' id="input-phone"  required>
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" name='Zgoda' id="check" required>
