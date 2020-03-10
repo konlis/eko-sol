@@ -327,12 +327,17 @@ footer .card-text:hover {
 }
 
 /*Fotowoltaika*/
-.foto-container .cards-title i {
+.first-icons-row .cards-title i {
   color: #2980b9;
 }
 
-.foto-container .card-cards i {
+.first-icons-row .card-cards i {
   color: #2980b9;
+}
+
+.first-icons-row .card-cards .card {
+  background-color: rgba(39, 174, 95, 0.192);
+  border-radius: 0;
 }
 
 .foto-container img {
@@ -358,6 +363,19 @@ footer .card-text:hover {
 
 .pompa img {
   height: 100%;
+}
+
+.second-icons-row .card-cards .card {
+  background-color: rgba(41, 127, 185, 0.205);
+  border-radius: 0;
+}
+
+.second-icons-row .card-cards .card i {
+  color: #27ae60;
+}
+
+.second-icons-row .cards-title i {
+  color: #27ae60;
 }
 
 /*Folie grzewcze*/

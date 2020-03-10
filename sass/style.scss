@@ -3,7 +3,9 @@
 $body-color-orange: rgb(243, 156, 18);
 $body-color-light: rgb(255, 255, 255);
 $body-color-blue: rgb(41, 128, 185);
+$body-color-blue-op: rgba(41, 127, 185, 0.205);
 $body-color-green: rgb(39, 174, 96);
+$body-color-green-op: rgba(39, 174, 95, 0.192);
 $body-color-dark: rgba(44, 62, 80,1.0);
 $navi-color: rgba(243, 156, 18,1.0);
 $header-color: rgb(60, 184, 255);
@@ -374,11 +376,17 @@ footer .card-text:hover {
 
 /*Fotowoltaika*/
 
-.foto-container .cards-title i {
+.first-icons-row .cards-title i {
     color: $body-color-blue;
 }
-.foto-container .card-cards i {
-    color: $body-color-blue;
+.first-icons-row .card-cards {
+    i {
+        color: $body-color-blue;
+    }
+    .card {
+        background-color: $body-color-green-op;
+        border-radius: 0;
+    }
 }
 .foto-container img {
     height: 300px;
@@ -398,6 +406,18 @@ footer .card-text:hover {
 }
 .pompa img {
     height: 100%;
+}
+.second-icons-row   {
+    .card-cards .card {
+        background-color: $body-color-blue-op;
+        border-radius: 0;
+        i {
+            color: $body-color-green;
+        }
+    }
+    .cards-title i {
+        color: $body-color-green;
+    }
 }
 
 /*Folie grzewcze*/
