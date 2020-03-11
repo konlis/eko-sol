@@ -209,37 +209,37 @@
                         </p>
                         <h5 class='text-center py-5 text-uppercase font-weight-bolder'>Chcesz wiedzieć więcej? Serdecznie zapraszamy do kontaktu.</h5>
                     </div>
-                </div>
-                <div class='row justify-content-center mb-5'>
-                    <div class='card'>
+                    <div class='row justify-content-center mb-5'>
                         <h5 class='title-text text-center pb-3 text-uppercase'>
                             Skontaktuj sie z nami
                         </h5>
-                        <form id="contact" class="contact-form " method="post" action="https://formspree.io/xzbrygzg">
+                        <form id="onas-contact" class="contact-form col-12" method="post" action="https://formspree.io/mwkqeboy">
                             <div class="row">
                                 <div class='form-row col-12'>
-                                    <div class="form-group col-6">
-                                        <input name="Imie" type="text" class="form-control" placeholder="Imię i nazwisko" required>
+                                    <div class="form-group col-6 pl-0">
+                                        <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                            required>
                                     </div>
-                                    <div class="form-group col-6">
-                                        <input name="Email" type="email" class="form-control" placeholder="Email"
+                                    <div class="form-group col-6 pr-0">
+                                        <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
                                             aria-describedby="emailHelp" required>
                                     </div>
                                 </div>
                                 <div class="col-12 form-group">
-                                    <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość"
+                                    <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
                                         required></textarea>
                                 </div>
-                                <div id="form-contact" class='form-messages'>
-                
+                                <div class="col-6 form-group">
+                                    <div id="form-onas-contact" class='form-messages'></div>
                                 </div>
                                 <div class="col-12 form-group">
-                                    <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                    <button id='onas-contact-button' type="submit" class="btn btn-success">Wyślij</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+                
             </div>
         </section>
         <section id='fotowoltaika'>
@@ -322,12 +322,24 @@
                         </div>
                     </div>
                 </div>
-                <div class='row'>
-                    <p class='pt-5'>Rządowe dotacje oraz ulgi sprawiają że inwestycja w
-                        fotowoltaikę jest jeszcze bardziej opłacalne. Zwrot inwestycji to
-                        około 5 lat co daje 20% zarobku rocznie. Czy warto wiec trzymać swoje pieniądze na niskooprocentowanych lokatach
-                        bankowych ? Oprócz dużej oszczędności na prądzie zabezpieczamy się na przyszłość przed wzrostem cen czy na czas
-                        emerytalny.</p>
+                <div class='row mt-5'>
+                    <div class="row test-row-2 flex-row-reverse no-gutters">
+                        <div class="col-md-6 pb-3">
+                            <img src="/images/articel/prad_za_darmo.png" class="card-img" alt="Red-Snake">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body pt-0 link">
+                                <h5 class="card-title">To sie opłaca !</h5>
+                                <p class="card-text card-text-text">
+                                    Rządowe dotacje oraz ulgi sprawiają że inwestycja w
+                                    fotowoltaikę jest jeszcze bardziej opłacalne. Zwrot inwestycji to
+                                    około 5 lat co daje 20% zarobku rocznie. Czy warto wiec trzymać swoje pieniądze na niskooprocentowanych lokatach
+                                    bankowych ? Oprócz dużej oszczędności na prądzie zabezpieczamy się na przyszłość przed wzrostem cen czy na czas
+                                    emerytalny
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class='row mb-5 row-cards'>
                     <div class="card second-icons-row">
@@ -379,6 +391,34 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class='row justify-content-center mb-5'>
+                        <h5 class='title-text text-center pb-3 text-uppercase'>
+                            Skontaktuj sie z nami
+                        </h5>
+                        <form id="foto-contact" class="contact-form col-12" method="post" action="https://formspree.io/xdodngpe">
+                            <div class="row">
+                                <div class='form-row col-12'>
+                                    <div class="form-group col-6 pl-0">
+                                        <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko" required>
+                                    </div>
+                                    <div class="form-group col-6 pr-0">
+                                        <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                            aria-describedby="emailHelp" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                        required></textarea>
+                                </div>
+                                <div class="col-6 form-group">
+                                    <div id="form-foto-contact" class='form-messages'></div>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <button id='foto-contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                </div>
+                            </div>
+                        </form>
                 </div>
             </div>
         </section>
@@ -457,6 +497,35 @@
                         <img src='/images/card/folie.jpg' class='card-img' alt='produkcja'>
                     </div>
                 </div>
+                <div class='row justify-content-center mb-5'>
+                    <h5 class='title-text text-center pb-3 text-uppercase'>
+                        Skontaktuj sie z nami
+                    </h5>
+                    <form id="folie-contact" class="contact-form col-12" method="post" action="https://formspree.io/xqklzlav">
+                        <div class="row">
+                            <div class='form-row col-12'>
+                                <div class="form-group col-6 pl-0">
+                                    <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                        required>
+                                </div>
+                                <div class="form-group col-6 pr-0">
+                                    <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                        aria-describedby="emailHelp" required>
+                                </div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                    required></textarea>
+                            </div>
+                            <div class="col-6 form-group">
+                                <div id="form-folie-contact" class='form-messages'></div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <button id='folie-contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <section id='pompy-ciepla'>
@@ -506,6 +575,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class='row justify-content-center mb-5'>
+                    <h5 class='title-text text-center pb-3 text-uppercase'>
+                        Skontaktuj sie z nami
+                    </h5>
+                    <form id="pompy-contact" class="contact-form col-12" method="post" action="https://formspree.io/mbjkroej">
+                        <div class="row">
+                            <div class='form-row col-12'>
+                                <div class="form-group col-6 pl-0">
+                                    <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                        required>
+                                </div>
+                                <div class="form-group col-6 pr-0">
+                                    <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                        aria-describedby="emailHelp" required>
+                                </div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                    required></textarea>
+                            </div>
+                            <div class="col-6 form-group">
+                                <div id="form-pompy-contact" class='form-messages'></div>
+                            </div>
+                            <div class="col-12 form-group">
+                                <button id='pompy-contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -691,6 +789,35 @@
                     </div>
                 </div>
             </div>
+            <div class='container justify-content-center mb-5'>
+                <h5 class='title-text text-center pb-3 text-uppercase'>
+                    Skontaktuj sie z nami
+                </h5>
+                <form id="termo-contact" class="contact-form col-12" method="post" action="https://formspree.io/mvoqprzd">
+                    <div class="row">
+                        <div class='form-row col-12'>
+                            <div class="form-group col-6 pl-0">
+                                <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                    required>
+                            </div>
+                            <div class="form-group col-6 pr-0">
+                                <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                    aria-describedby="emailHelp" required>
+                            </div>
+                        </div>
+                        <div class="col-12 form-group">
+                            <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                required></textarea>
+                        </div>
+                        <div class="col-6 form-group">
+                            <div id="form-termo-contact" class='form-messages'></div>
+                        </div>
+                        <div class="col-12 form-group">
+                            <button id='termo-contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
         <section id='program-czyste-powietrze'>
             <div class='container air'>
@@ -777,6 +904,35 @@
                         </div>
                           
                         </div>
+                        <div class='container justify-content-center mb-5'>
+                            <h5 class='title-text text-center pb-3 text-uppercase'>
+                                Skontaktuj sie z nami
+                            </h5>
+                            <form id="powietrze-contact" class="contact-form col-12" method="post" action="https://formspree.io/xeqzjaww">
+                                <div class="row">
+                                    <div class='form-row col-12'>
+                                        <div class="form-group col-6 pl-0">
+                                            <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                                required>
+                                        </div>
+                                        <div class="form-group col-6 pr-0">
+                                            <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                                aria-describedby="emailHelp" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                            required></textarea>
+                                    </div>
+                                    <div class="col-6 form-group">
+                                        <div id="form-powietrze-contact" class='form-messages'></div>
+                                    </div>
+                                    <div class="col-12 form-group">
+                                        <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="poziom-dotacji-air">
                         <h1>sss</h1>
@@ -838,6 +994,35 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class='container justify-content-center mb-5'>
+                                <h5 class='title-text text-center pb-3 text-uppercase'>
+                                    Skontaktuj sie z nami
+                                </h5>
+                                <form id="prad-contact" class="contact-form col-12" method="post" action="https://formspree.io/xjvobrql">
+                                    <div class="row">
+                                        <div class='form-row col-12'>
+                                            <div class="form-group col-6 pl-0">
+                                                <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                                    required>
+                                            </div>
+                                            <div class="form-group col-6 pr-0">
+                                                <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                                    aria-describedby="emailHelp" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                                required></textarea>
+                                        </div>
+                                        <div class="col-6 form-group">
+                                            <div id="form-prad-contact" class='form-messages'></div>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <button id='prad-contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="poziom-dotacji-prad">
@@ -876,34 +1061,34 @@
                         <h5 class='text-center pt-5 font-weight-bolder'>Poleć nas znajomym, sąsiadom, rodzinie i zyskaj 300 zł oraz osobie polecanej zniżkę 200 zł na instalację fotowoltaiczną.</h5>
                     </div>
                 </div>
-            </div>
-            <div class='row justify-content-center my-5'>
-                <div class='card'>
-                    <h5 class='title-text text-center pb-3 text-uppercase'>
-                        Skontaktuj sie z nami
-                    </h5>
-                    <form id="contact" class="contact-form " method="post"
-                        action="https://formspree.io/xzbrygzg">
-                        <div class="row">
-                            <div class='form-row col-12'>
-                                <div class="form-group col-6">
-                                    <input name="Imie" type="text" class="form-control" placeholder="Imię i nazwisko" required>
-                                </div>
-                                <div class="form-group col-6">
-                                    <input name="Email" type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp" required>
-                                </div>
+                <div class='row justify-content-center my-5'>
+                <h5 class='title-text text-center pb-3 text-uppercase'>
+                    Skontaktuj sie z nami
+                </h5>
+                <form id="wspolpraca-contact" class="contact-form col-12" method="post" action="https://formspree.io/mrglzkqd">
+                    <div class="row">
+                        <div class='form-row col-12'>
+                            <div class="form-group col-6 pl-0">
+                                <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                    required>
                             </div>
-                            <div class="col-12 form-group">
-                                <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
-                            </div>
-                            <div id="form-contact" class='form-messages'>
-                    
-                            </div>
-                            <div class="col-12 form-group">
-                                <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                            <div class="form-group col-6 pr-0">
+                                <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                    aria-describedby="emailHelp" required>
                             </div>
                         </div>
-                    </form>
+                        <div class="col-12 form-group">
+                            <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                required></textarea>
+                        </div>
+                        <div class="col-6 form-group">
+                            <div id="form-wspolpraca-contact" class='form-messages'></div>
+                        </div>
+                        <div class="col-12 form-group">
+                            <button id='wspolpraca-contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                        </div>
+                    </div>
+                </form>
                 </div>
             </div>
         </section>
@@ -950,7 +1135,7 @@
                             <form id="contact" class="contact-form col-12 col-xl-8 justify-content-center" method="post" action="https://formspree.io/xzbrygzg">
                                 <div class="row">
                                     <div class="col-12 form-group">
-                                        <input name="Imie" type="text" class="form-control" placeholder="Imię i nazwisko" required>
+                                        <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko" required>
                                     </div>
                                     <div class="col-12 form-group">
                                         <input name="Miejscowosc" text" class="form-control" placeholder="Miejscowość">
@@ -959,15 +1144,19 @@
                                         <input name="Email" type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp" required>
                                     </div>
                                     <div class="col-12 form-group">
-                                        <input name="Telefon" type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="form-control" placeholder="123-456-789" required>
+                                        <input name="Telefon" type="tel"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}" class="form-control" placeholder="Telefon" required>
                                     </div>
                                     <div class="col-12 form-group">
-                                        <textarea name="Wiadomosc" class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
+                                        <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość" required></textarea>
                                     </div>
-                                    <div id="form-contact" class='form-messages'>
-                                    
+                                    <div class="col-12 form-group">
+                                        <div id="form-contact" class='form-messages'>
+                                        
+                                        </div>
                                     </div>
-                                    <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                    <div class="col-12 form-group">
+                                        <button id='contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -1035,7 +1224,6 @@
                 </div>
             </div>
         </section>
-        
         <section id='wycena'>
             <div class='row wycena'>
                 <div class='row text-on-image'>
@@ -1150,7 +1338,6 @@
                 <h4 class='link py-3'>Zapraszamy do kontaktu <a href='#kontakt'>tutaj</a> lub pod numerem znajdującym sie poniżej.</h4>
             </div>   
         </section>
-        
     </div>
     <div class='dynamicForm modal-hidden'>
         <div class=' modal-content'>
@@ -1190,7 +1377,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="123-456-789" placeholder='123-456-789' name='Telefon' id="input-phone"  required>
+                    <input type="tel"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}" class="tel" placeholder='Wpisz numer' name='Telefon' id="input-phone"  required>
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" name='Zgoda' id="check" required>
@@ -1199,10 +1386,11 @@
                             przetwarzane zgodnie z <a href=''>Polityką Prywatności</a>.
                     </label>
                 </div>
-                <div id="form-messages" class='form-messages'>
-                    
+                <div class="form-group">
+                    <div id="form-messages" class='form-messages'>
+                    </div>
                 </div>
-                <button id='submit-button' type="submit" class="btn modal-btn btn-success">Zamów połączenie</button>
+                    <button id='submit-button' type="submit" class="btn modal-btn btn-success">Zamów połączenie</button>
             </form>
         </div>
     </div>
@@ -1210,6 +1398,9 @@
         <div class='action'>
             <i class="fas fa-phone-volume"></i>
         </div>
+    </div>
+    <div class='social-icons'>
+        <a href='https://www.facebook.com/ECO-SOL-odnawialne-źródła-energii-101102934841612/' class='facebook'>facebook<i class="fab fa-facebook-f"></i></a>
     </div>
     <footer>
         <div class='d-flex footer-calc'>
@@ -1238,6 +1429,7 @@
                                     <h6>729 965 340</h6>
                                     <h6>720 815 209</h6>
                                 </div>  
+                                <h6>NIP: 517 040 5595</h6>
                             </div>
                         </div>
                     </div>

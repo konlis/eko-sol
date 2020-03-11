@@ -2,7 +2,7 @@
 
 /*Change pages without reloading*/
 
-function changePages () {
+function changePages() {
 
     this.pages = Array.from(document.querySelector('#pages').children);
     this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
@@ -11,7 +11,7 @@ function changePages () {
     let pagesMatchingHash = [];
 
     if (window.location.hash.length > 2) {
-        const idFromHash = window.location.hash.replace('#/','');
+        const idFromHash = window.location.hash.replace('#/', '');
         console.log('idFromHash', idFromHash);
 
         pagesMatchingHash = this.pages.filter(function (page) {
@@ -19,50 +19,55 @@ function changePages () {
         });
         console.log('pagesMatchingHash', pagesMatchingHash);
     }
-    //history.pushState(page.id, null, null);
+
     this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
 
+        
     for (let link of this.navLinks) {
         link.addEventListener('click', function (event) {
-            window.onpopstate = checkState;
+           
             const clickedElement = this;
             event.preventDefault();
             /* TODO: get page id from href */
             const id = clickedElement.getAttribute('href').replace('#', '');
             //console.log('id', id)
             /* TODO: activate page */
-            
+           
+           history.pushState({id}, null, `#id`);
             activatePage(id);
-            history.pushState(id, null, id);
         });
     }
 
     for (let link of this.buttons) {
         link.addEventListener('click', function (event) {
-            window.onpopstate = checkState;
+           
             const clickedElement = this;
             event.preventDefault();
             /* TODO: get page id from href */
             const id = clickedElement.getAttribute('href').replace('#', '');
             /* TODO: activate page */
-            
-            activatePage(id);
-            history.pushState(id, null, null);
+   
+             activatePage(id);
         });
+    }
+
     
-    }
-    function checkState(e) {
-        // page reload
-        if (e.state) {
-            console.log(e.state.id);
-            //activatePage(state.id);
-        }
-    }
 }
 
-function activatePage (pageId) {
+window.addEventListener('popstate', (event) => {
+   
+    var hs = history.state;
+    
+    if ((hs === null) || (hs === undefined))
+    hs = event.state;
+   
+    if (hs !== null) 
+    activatePage(hs);
 
+    console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+});
 
+function activatePage(pageId) {
 
     for (let link of this.navLinks) {
         link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
@@ -71,18 +76,17 @@ function activatePage (pageId) {
     for (let page of this.pages) {
         page.classList.toggle('active', page.id == pageId);
         //console.log('page', page);
-        
     }
-    
     window.location.hash = '#' + pageId;
     //console.log('hash', window.location.hash);
-    
 }
+   
 
 changePages();
 
-/*Contact form*/
+/*Contact forms*/
 
+/*Dynamic form*/
 window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
@@ -122,12 +126,14 @@ window.addEventListener("DOMContentLoaded", function () {
         ajax(form.method, form.action, data, success, error);
     });
 });
+
+/*O-nas form*/
 window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
-    var form = document.getElementById("contact");
+    var form = document.getElementById("onas-contact");
     //var button = document.getElementById("contact-button");
-    var status = document.getElementById("form-contact");
+    var status = document.getElementById("form-onas-contact");
 
     // Success and Error functions for after the form is submitted
 
@@ -150,6 +156,158 @@ window.addEventListener("DOMContentLoaded", function () {
         ajax(form.method, form.action, data, success, error);
     });
 });
+
+/*Wspolpraca form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("wspolpraca-contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-wspolpraca-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+/*Fotowoltaika form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("foto-contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-foto-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+/*Pompy form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("pompy-contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-pompy-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+/*Folie form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("folie-contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-folie-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+/*Folie form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("termo-contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-termo-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+/*Wycena form*/
 window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
@@ -188,6 +346,96 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/*Kontakt form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+/*Moj prad form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("prad-contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-prad-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+/*Czyste powietrze form*/
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+    var form = document.getElementById("powietrze-contact");
+    //var button = document.getElementById("contact-button");
+    var status = document.getElementById("form-powietrze-contact");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        form.reset();
+        //button.style = "display: none ";
+        status.style = "display: block";
+        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+    }
+
+    function error() {
+        status.innerHTML = "Coś poszło nie tak!";
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
  // helper function for sending an AJAX request
 
 function ajax(method, url, data, success, error) {
@@ -223,6 +471,4 @@ window.onload = function(){
     btn.addEventListener('click', toggleModal);
     closeForm.addEventListener('click', toggleModal);
     
-}
-
-
+    }

@@ -714,6 +714,63 @@ button:active {
     transition: ease-in-out .2s;
 }
 
+/*Contact Form*/ 
+
+.contact-form {
+    padding: 0;
+}
+
+/*Social sidebar*/ 
+
+.social-icons {
+    position: fixed;
+    top: 45%;
+    left: 0%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+}
+.social-icons a {
+    text-decoration: none ;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 22px;
+    font-family: $font-logo;
+    text-align: right;
+    border-radius: 0px 50px 50px 0;
+    transform: translate(-140px, 0px);
+    transition: all 0.5s;
+    font-weight: bolder;
+}
+.social-icons a:hover {
+    transform: translate(0px, 0px);
+    color: white;
+}
+
+.social-icons a i {
+    margin-left: 20px;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: $body-color-blue;
+    transition: all 0.5s;
+}
+.social-icons a:hover i {
+    transform: rotate(360deg);
+}
+
+.facebook {
+    background-color: $body-color-blue;
+    color: $font-color-light;
+
+
+}
+
 /*Modal*/
 
 .modal-hidden {
