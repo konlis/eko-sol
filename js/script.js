@@ -33,7 +33,7 @@ function changePages() {
             //console.log('id', id)
             /* TODO: activate page */
            
-           history.pushState({id}, null, `#id`);
+            history.pushState({id}, null, `#${id}`);
             activatePage(id);
         });
     }
@@ -62,7 +62,7 @@ window.addEventListener('popstate', (event) => {
     hs = event.state;
    
     if (hs !== null) 
-    activatePage(hs);
+    activatePage(hs.id);
 
     console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
 });
@@ -77,7 +77,7 @@ function activatePage(pageId) {
         page.classList.toggle('active', page.id == pageId);
         //console.log('page', page);
     }
-    window.location.hash = '#' + pageId;
+    //window.location.hash = '#' + pageId;
     //console.log('hash', window.location.hash);
 }
    
