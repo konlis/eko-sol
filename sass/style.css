@@ -144,6 +144,16 @@ body {
   min-width: 100%;
   object-fit: cover;
 }
+.title-text {
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+.about .card-title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 5px 5px 20px white;
+}
 footer {
   background-color: #f1f2f6;
   width: 100vw;
@@ -263,6 +273,7 @@ footer .card-text:hover {
 }
 .first-icons-row .card-cards .card {
   border-radius: 0;
+  min-width: auto;
 }
 .foto-container img {
   height: 300px;

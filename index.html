@@ -175,7 +175,7 @@
             </div>
         </section>
         <section id='o-nas' class='content'>
-            <div class='row'>
+            <div class='row about'>
                 <div class='row text-on-image'>
                     <div class=' wspolpraca-image'>
                         <img src='/images/header/project.jpeg' class='img-fluid'>
@@ -207,11 +207,26 @@
                             właściwej realizacji inwestycji, czyli montażu i uruchomienia. Monitorujemy każdy etap prowadzonych instalacji, a także
                             w każdym momencie służymy swoją wiedzą i doświadczeniem.
                         </p>
-                        <h5 class='text-center py-5 text-uppercase font-weight-bolder'>Chcesz wiedzieć więcej? Serdecznie zapraszamy do kontaktu.</h5>
+                    </div>
+                    <div class='row mb-5'>
+                        <div class='card col-sm-6 p-0 '>
+                            <img src='/images/mapagreen.jpg' class='card-img'>
+                            <div class='card-img-overlay px-0'>
+                                <div class='card-body px-0 text-center'>
+                                    <h4 class='card-title'>Realizujemy usługi w podanych miastach i okolicach</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='card-body col-sm-6 p-0 '>
+                            <p>Rzeszów, Lublin, Kraków, Tarnów, Kielce, Przemyśl, Krosno, Sanok, Dębica, Mielec, Przeworsk, Jarosław,
+                                Tarnobrzeg,
+                                Zamość, Łańcut, Strzyżów, Gorlice, Leżajsk, Kolbuszowa, Nisko, Dynów, Biłgoraj, Jasło, Ropczyce, Nowa
+                                Sarzyna, Kraśnik.</p>
+                        </div>
                     </div>
                     <div class='row justify-content-center mb-5'>
-                        <h5 class='title-text text-center pb-3 text-uppercase'>
-                            Skontaktuj sie z nami
+                        <h5 class='title-text pb-5'>
+                            Chcesz wiedzieć więcej? Serdecznie zapraszamy do kontaktu.
                         </h5>
                         <form id="onas-contact" class="contact-form col-12" method="post" action="https://formspree.io/mwkqeboy">
                             <div class="row">
@@ -239,7 +254,6 @@
                         </form>
                     </div>
                 </div>
-                
             </div>
         </section>
         <section id='fotowoltaika'>
@@ -789,7 +803,7 @@
                     </div>
                 </div>
             </div>
-            <div class='container justify-content-center mb-5'>
+            <div class='container justify-content-center p-0 mb-5'>
                 <h5 class='title-text text-center pb-3 text-uppercase'>
                     Skontaktuj sie z nami
                 </h5>
@@ -904,7 +918,7 @@
                         </div>
                           
                         </div>
-                        <div class='container justify-content-center mb-5'>
+                        <div class='row justify-content-center mb-5'>
                             <h5 class='title-text text-center pb-3 text-uppercase'>
                                 Skontaktuj sie z nami
                             </h5>
@@ -994,7 +1008,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class='container justify-content-center mb-5'>
+                            <div class='row justify-content-center mb-5'>
                                 <h5 class='title-text text-center pb-3 text-uppercase'>
                                     Skontaktuj sie z nami
                                 </h5>
@@ -1060,36 +1074,37 @@
                         </p>
                         <h5 class='text-center pt-5 font-weight-bolder'>Poleć nas znajomym, sąsiadom, rodzinie i zyskaj 300 zł oraz osobie polecanej zniżkę 200 zł na instalację fotowoltaiczną.</h5>
                     </div>
-                </div>
-                <div class='row justify-content-center my-5'>
-                <h5 class='title-text text-center pb-3 text-uppercase'>
-                    Skontaktuj sie z nami
-                </h5>
-                <form id="wspolpraca-contact" class="contact-form col-12" method="post" action="https://formspree.io/mrglzkqd">
-                    <div class="row">
-                        <div class='form-row col-12'>
-                            <div class="form-group col-6 pl-0">
-                                <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
-                                    required>
+                    <div class='container justify-content-center p-0 my-5'>
+                        <h5 class='title-text text-center pb-3 text-uppercase'>
+                            Skontaktuj sie z nami
+                        </h5>
+                        <form id="wspolpraca-contact" class="contact-form col-12" method="post" action="https://formspree.io/mrglzkqd">
+                            <div class="row">
+                                <div class='form-row col-12'>
+                                    <div class="form-group col-6 pl-0">
+                                        <input name="Imie" maxlength='25' type="text" class="form-control" placeholder="Imię i nazwisko"
+                                            required>
+                                    </div>
+                                    <div class="form-group col-6 pr-0">
+                                        <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
+                                            aria-describedby="emailHelp" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
+                                        required></textarea>
+                                </div>
+                                <div class="col-6 form-group">
+                                    <div id="form-wspolpraca-contact" class='form-messages'></div>
+                                </div>
+                                <div class="col-12 form-group">
+                                    <button id='wspolpraca-contact-button' type="submit" class="btn btn-success">Wyślij</button>
+                                </div>
                             </div>
-                            <div class="form-group col-6 pr-0">
-                                <input name="Email" type="email" class="form-control pr-0" placeholder="Email"
-                                    aria-describedby="emailHelp" required>
-                            </div>
-                        </div>
-                        <div class="col-12 form-group">
-                            <textarea name="Wiadomosc" maxlength='500' class="form-control" rows="3" placeholder="Wiadomość"
-                                required></textarea>
-                        </div>
-                        <div class="col-6 form-group">
-                            <div id="form-wspolpraca-contact" class='form-messages'></div>
-                        </div>
-                        <div class="col-12 form-group">
-                            <button id='wspolpraca-contact-button' type="submit" class="btn btn-success">Wyślij</button>
-                        </div>
+                        </form>
                     </div>
-                </form>
                 </div>
+                
             </div>
         </section>
         <section id='kontakt'>
@@ -1100,38 +1115,6 @@
                             <h5 class='title-text text-uppercase pb-3'>
                                 Skontaktuj sie z nami
                             </h5>
-                            <!-- <form id="ajax-contact" class='contact-form' action="contactform.php" method="POST">
-                                <div class="form-group">
-                                    <label for="input-name">Imię i nazwisko</label>
-                                    <input type="text" class="form-control" name='name' id="input-name" aria-describedby="emailHelp" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="input-city">Miejscowość</label>
-                                    <input type="text" class="form-control" name='place' id="input-city">
-                                </div>
-                                <div class="form-group">
-                                    <label for="input-phone">Numer telefonu</label>
-                                    <input type="text" class="form-control" name='phone' id="input-phone">
-                                </div>
-                                <div class="form-group">
-                                    <label for="input-email">Email</label>
-                                    <input type="email" class="form-control" name='email' id="input-email" aria-describedby="emailHelp" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="input-text">Wiadomość</label>
-                                    <textarea type="text" class="form-control" name='message' id="input-text" required></textarea>
-                                </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" name='agree' id="check" required>
-                                    <label class="form-check-label" for="exampleCheck1">
-                                        Zgadzam się z <a href=''>Polityką Przetwarzania danych osobowych</a>
-                                    </label>
-                                </div>
-                                <div id="form-messages">
-                                    
-                                </div>
-                                <button id='submit-button' type="submit" name='submit' class="btn btn-success">Wyślij</button>
-                            </form> -->
                             <form id="contact" class="contact-form col-12 col-xl-8 justify-content-center" method="post" action="https://formspree.io/xzbrygzg">
                                 <div class="row">
                                     <div class="col-12 form-group">
@@ -1168,6 +1151,9 @@
                         </div>
                     </div>
                 </div>    
+                <div class='row mb-5'>
+                    <h5>Jesteśmy w Rzeszowie, Krakowie, Łańcucie</h5>
+                </div>
             </div>       
         </section>
         <section id='blog'>
@@ -1259,8 +1245,10 @@
                                 <select name='Poszycie' class="custom-select" required>
                                     <option value="">Wybierz rodzaj poszycia</option>
                                     <option value="Blachodachówka">Blachodachówka</option>
+                                    <option value="Blacha trapezowa">Blacha trapezowa</option>
                                     <option value="Dachówka betonowa/ceramiczna">Dachówka betonowa/ceramiczna</option>
                                     <option value="Gont">Gont/papa</option>
+                                    <option value="Inne">Inne</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -1275,17 +1263,36 @@
                             </div>
                         </div>
                         <div class='form-group '>
-                            <div class="form-group">
-                                <label for="adres">Adres</label>
-                                <input type="text" class="form-control" placeholder='ul. Słoneczna 7' name='Adres' id="input-name" required>
+                            <div class='form-row'>
+                                <div class="form-group col-sm-6">
+                                    <label for="Miejscowosc/Ulica">Miejscowość / Ulica</label>
+                                    <input type="text" class="form-control" placeholder='Wpisz miejscowość lub ulicę' name='Miejscowosc' id="input-name" required>
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="adres">Nr domu / Nr mieszkania</label>
+                                    <input type="text" class="form-control" placeholder='Wpisz nr domu lub mieszkania' name='Nr domu/mieszkania' id="input-name" required>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputState">Województwo</label>
                                 <select id="inputState" name='Wojewodztwo' class="form-control">
                                     <option value="">Wybierz...</option>
-                                    <option value='Podkarpackie'>Podkarpackie</option>
+                                    <option value='Dolnośląskie'>Dolnośląskie</option>
+                                    <option value='Kujawsko-pomorskie'>Kujawsko-pomorskie</option>
                                     <option value='Lubelskie'>Lubelskie</option>
+                                    <option value='Lubuskie'>Lubuskie</option>
+                                    <option value='Łódzkie'>Łódzkie</option>
+                                    <option value='Małopolskie'>Małopolskie</option>
+                                    <option value='Mazowieckie'>Mazowieckie</option>
+                                    <option value='Opolskie'>Opolskie</option>
+                                    <option value='Podkarpackie'>Podkarpackie</option>
+                                    <option value='Podlaskie'>Podlaskie</option>
+                                    <option value='Pomorskie'>Pomorskie</option>
+                                    <option value='Śląskie'>Śląskie</option>
                                     <option value='Świętokrzyskie'>Świętokrzyskie</option>
+                                    <option value='Warmińsko-mazurksie'>Warmińsko-mazurksie</option>
+                                    <option value='Wielkopolskie'>Wielkopolskie</option>
+                                    <option value='Zachodniopomorskie'>Zachodniopomorskie</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -1300,7 +1307,7 @@
                         <div class='form-group'>
                             <div class="form-group">
                                 <label for="phone">Nr telefonu</label>
-                                <input type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="form-control" placeholder='123-456-789' name='Telefon' id="Telefon"
+                                <input type="tel"  pattern="[0-9]{3}[0-9]{3}[0-9]{3}" class="form-control" placeholder='123456789' name='Telefon' id="Telefon"
                                     required>
                             </div>
                         </div>

@@ -182,7 +182,19 @@ body {
      object-fit: cover;
 }
 
-/*Cards*/
+/*About*/
+.title-text {
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about .card-title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-shadow: 5px 5px 20px white;
+}
+
 /*Footer*/
 footer {
   background-color: #f1f2f6;
@@ -339,6 +351,7 @@ footer .card-text:hover {
 
 .first-icons-row .card-cards .card {
   border-radius: 0;
+  min-width: auto;
 }
 
 .foto-container img {
