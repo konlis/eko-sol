@@ -339,6 +339,20 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/*Disable if check value*/
+
+const checkedOption = document.getElementById('grunt');
+const disableSelect = document.getElementById('poszycie');
+const choiceSelected = document.getElementById('montaz');
+
+choiceSelected.addEventListener('click', function(){
+    if (checkedOption.selected) {
+        disableSelect.disabled=true; 
+    } else {
+        disableSelect.disabled = false; 
+    }
+});
+
 /*Kontakt form*/
 window.addEventListener("DOMContentLoaded", function () {
 
@@ -465,3 +479,4 @@ window.onload = function(){
     closeForm.addEventListener('click', toggleModal);
     
     }
+
