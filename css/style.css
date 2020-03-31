@@ -459,6 +459,10 @@ footer .card-text:hover {
   font-weight: bold;
 }
 
+.folie .title-text span {
+  color: #b71540;
+}
+
 .card-cards {
   display: -ms-flexbox;
   display: flex;
