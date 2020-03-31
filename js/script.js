@@ -12,12 +12,10 @@ function changePages() {
 
     if (window.location.hash.length > 2) {
         const idFromHash = window.location.hash.replace('#/', '');
-        console.log('idFromHash', idFromHash);
 
         pagesMatchingHash = this.pages.filter(function (page) {
             return page.id == idFromHash;
         });
-        console.log('pagesMatchingHash', pagesMatchingHash);
     }
 
     this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
@@ -30,7 +28,6 @@ function changePages() {
             event.preventDefault();
             /* TODO: get page id from href */
             const id = clickedElement.getAttribute('href').replace('#', '');
-            //console.log('id', id)
             /* TODO: activate page */
            
             history.pushState({id}, null, `#${id}`);
@@ -64,21 +61,17 @@ window.addEventListener('popstate', (event) => {
     if (hs !== null) 
     activatePage(hs.id);
 
-    console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+    //console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
 });
 
 function activatePage(pageId) {
 
     for (let link of this.navLinks) {
         link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
-        //console.log('link', link);
     }
     for (let page of this.pages) {
         page.classList.toggle('active', page.id == pageId);
-        //console.log('page', page);
     }
-    //window.location.hash = '#' + pageId;
-    //console.log('hash', window.location.hash);
 }
    
 
