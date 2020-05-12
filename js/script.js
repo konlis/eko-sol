@@ -2,80 +2,80 @@
 
 /*Change pages without reloading*/
 
-function changePages() {
+//  function changePages() {
 
-    this.pages = Array.from(document.querySelector('#pages').children);
-    this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
-    this.buttons = Array.from(document.querySelectorAll('.link a'));
+//     this.pages = Array.from(document.querySelector('#pages').children);
+//     this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
+//     this.buttons = Array.from(document.querySelectorAll('.link a'));
 
-    let pagesMatchingHash = [];
+//     let pagesMatchingHash = [];
 
-    if (window.location.hash.length > 2) {
-        const idFromHash = window.location.hash.replace('#/', '');
+//     if (window.location.hash.length > 2) {
+//         const idFromHash = window.location.hash.replace('#/', '');
 
-        pagesMatchingHash = this.pages.filter(function (page) {
-            return page.id == idFromHash;
-        });
-    }
+//         pagesMatchingHash = this.pages.filter(function (page) {
+//             return page.id == idFromHash;
+//         });
+//     }
 
-    this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
+//     this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
 
         
-    for (let link of this.navLinks) {
-        link.addEventListener('click', function (event) {
+//     for (let link of this.navLinks) {
+//         link.addEventListener('click', function (event) {
            
-            const clickedElement = this;
-            event.preventDefault();
-            /* TODO: get page id from href */
-            const id = clickedElement.getAttribute('href').replace('#', '');
-            /* TODO: activate page */
+//             const clickedElement = this;
+//             event.preventDefault();
+//             /* TODO: get page id from href */
+//             const id = clickedElement.getAttribute('href').replace('#', '');
+//             /* TODO: activate page */
            
-            history.pushState({id}, null, `#${id}`);
-            activatePage(id);
-        });
-    }
+//             history.pushState({id}, null, `#${id}`);
+//             activatePage(id);
+//         });
+//     }
 
-    for (let link of this.buttons) {
-        link.addEventListener('click', function (event) {
+//     for (let link of this.buttons) {
+//         link.addEventListener('click', function (event) {
            
-            const clickedElement = this;
-            event.preventDefault();
-            /* TODO: get page id from href */
-            const id = clickedElement.getAttribute('href').replace('#', '');
-            /* TODO: activate page */
+//             const clickedElement = this;
+//             event.preventDefault();
+//             /* TODO: get page id from href */
+//             const id = clickedElement.getAttribute('href').replace('#', '');
+//             /* TODO: activate page */
    
-             activatePage(id);
-        });
-    }
+//              activatePage(id);
+//         });
+//     }
 
     
-}
+// }
 
-window.addEventListener('popstate', (event) => {
+// window.addEventListener('popstate', (event) => {
    
-    var hs = history.state;
+//     var hs = history.state;
     
-    if ((hs === null) || (hs === undefined))
-    hs = event.state;
+//     if ((hs === null) || (hs === undefined))
+//     hs = event.state;
    
-    if (hs !== null) 
-    activatePage(hs.id);
+//     if (hs !== null) 
+//     activatePage(hs.id);
 
-    //console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
-});
+//     //console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+// });
 
-function activatePage(pageId) {
+// function activatePage(pageId) {
 
-    for (let link of this.navLinks) {
-        link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
-    }
-    for (let page of this.pages) {
-        page.classList.toggle('active', page.id == pageId);
-    }
-}
+//     for (let link of this.navLinks) {
+//         link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
+//     }
+//     for (let page of this.pages) {
+//         page.classList.toggle('active', page.id == pageId);
+//     }
+// }
    
 
-changePages();
+// changePages();
 
 /*Contact forms*/
 
