@@ -148,7 +148,7 @@ body {
       align-items: center;
 }
 
-.card-header-text h1 {
+.card-header-text h2 {
   color: white;
   text-shadow: 5px 5px 10px black;
   background-color: rgba(44, 62, 80, 0.589);
@@ -286,6 +286,19 @@ footer .card-text:hover {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+}
+
+.copyright a {
+  text-decoration: none;
+}
+
+.polityka {
+  color: black;
+  padding-right: 10px;
+}
+
+.polityka:hover {
+  color: white;
 }
 
 /*logo-slider*/
