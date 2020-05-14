@@ -1,82 +1,5 @@
 /* eslint-disable no-undef */
 
-/*Change pages without reloading*/
-
-//  function changePages() {
-
-//     this.pages = Array.from(document.querySelector('#pages').children);
-//     this.navLinks = Array.from(document.querySelectorAll('.nav-link'));
-//     this.buttons = Array.from(document.querySelectorAll('.link a'));
-
-//     let pagesMatchingHash = [];
-
-//     if (window.location.hash.length > 2) {
-//         const idFromHash = window.location.hash.replace('#/', '');
-
-//         pagesMatchingHash = this.pages.filter(function (page) {
-//             return page.id == idFromHash;
-//         });
-//     }
-
-//     this.activatePage(pagesMatchingHash.length ? pagesMatchingHash[0].id : this.pages[0].id);
-
-        
-//     for (let link of this.navLinks) {
-//         link.addEventListener('click', function (event) {
-           
-//             const clickedElement = this;
-//             event.preventDefault();
-//             /* TODO: get page id from href */
-//             const id = clickedElement.getAttribute('href').replace('#', '');
-//             /* TODO: activate page */
-           
-//             history.pushState({id}, null, `#${id}`);
-//             activatePage(id);
-//         });
-//     }
-
-//     for (let link of this.buttons) {
-//         link.addEventListener('click', function (event) {
-           
-//             const clickedElement = this;
-//             event.preventDefault();
-//             /* TODO: get page id from href */
-//             const id = clickedElement.getAttribute('href').replace('#', '');
-//             /* TODO: activate page */
-   
-//              activatePage(id);
-//         });
-//     }
-
-    
-// }
-
-// window.addEventListener('popstate', (event) => {
-   
-//     var hs = history.state;
-    
-//     if ((hs === null) || (hs === undefined))
-//     hs = event.state;
-   
-//     if (hs !== null) 
-//     activatePage(hs.id);
-
-//     //console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
-// });
-
-// function activatePage(pageId) {
-
-//     for (let link of this.navLinks) {
-//         link.classList.toggle('active', link.getAttribute('href') == '#' + pageId);
-//     }
-//     for (let page of this.pages) {
-//         page.classList.toggle('active', page.id == pageId);
-//     }
-// }
-   
-
-// changePages();
-
 /*Contact forms*/
 
 /*Dynamic form*/
@@ -185,6 +108,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
     var form = document.getElementById("foto-contact");
+    console.log("contact", form)
     //var button = document.getElementById("contact-button");
     var status = document.getElementById("form-foto-contact");
 
@@ -358,6 +282,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
     var form = document.getElementById("contact");
+    console.log("kontakt from dcript js", form);
     //var button = document.getElementById("contact-button");
     var status = document.getElementById("form-contact");
 
@@ -414,8 +339,8 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 /*Czyste powietrze form*/
-window.addEventListener("DOMContentLoaded", function () {
-
+window.addEventListener("DOMContentLoaded", function (event) {
+    console.log("czyste powietrze", event)
     // get the form elements defined in your form HTML above
     var form = document.getElementById("powietrze-contact");
     //var button = document.getElementById("contact-button");
