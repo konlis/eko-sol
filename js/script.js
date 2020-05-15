@@ -48,6 +48,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
     var form = document.getElementById("onas-contact");
+    console.log("onas form", form)
     //var button = document.getElementById("contact-button");
     var status = document.getElementById("form-onas-contact");
 
@@ -78,6 +79,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
     var form = document.getElementById("wspolpraca-contact");
+    console.log("form-wspolpraca", form);
     //var button = document.getElementById("contact-button");
     var status = document.getElementById("form-wspolpraca-contact");
 
@@ -388,7 +390,25 @@ function ajax(method, url, data, success, error) {
 /*Dynamic Contact form*/
 
     
-window.onload = function(){
+// window.onload = function(){
+
+//     function toggleModal() {
+        
+//         const modal = document.querySelector('.dynamicForm');
+
+//         modal.classList.toggle('modal-hidden');
+//     }
+
+//     const closeForm = document.querySelector('.fa-times');
+//     const btn = document.querySelector('.actionbtn');
+
+//     btn.addEventListener('click', toggleModal);
+//     closeForm.addEventListener('click', toggleModal);
+    
+//     }
+
+window.addEventListener("DOMContentLoaded", function (ev) {
+    console.log(ev , "loaded")
 
     function toggleModal() {
         
@@ -399,9 +419,13 @@ window.onload = function(){
 
     const closeForm = document.querySelector('.fa-times');
     const btn = document.querySelector('.actionbtn');
+    
 
     btn.addEventListener('click', toggleModal);
+    console.log("click", btn);
+    
+    
     closeForm.addEventListener('click', toggleModal);
     
-    }
+    })
 
