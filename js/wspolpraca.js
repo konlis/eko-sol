@@ -26,13 +26,14 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*Folie form*/
+/*Wspolpraca form*/
 window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
-    var form = document.getElementById("folie-contact");
+    var form = document.getElementById("wspolpraca-contact");
+    console.log("form-wspolpraca", form);
     //var button = document.getElementById("contact-button");
-    var status = document.getElementById("form-folie-contact");
+    var status = document.getElementById("form-wspolpraca-contact");
 
     // Success and Error functions for after the form is submitted
 

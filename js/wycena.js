@@ -26,33 +26,42 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*Folie form*/
+/*Wycena form*/
 window.addEventListener("DOMContentLoaded", function () {
 
     // get the form elements defined in your form HTML above
-    var form = document.getElementById("folie-contact");
-    //var button = document.getElementById("contact-button");
-    var status = document.getElementById("form-folie-contact");
+    var formWycena = document.getElementById("wycena-contact");
+    //var buttonWycena = document.getElementById("submit-button-wycena");
+    var statusWycena = document.getElementById("wycena-status");
 
     // Success and Error functions for after the form is submitted
 
     function success() {
-        form.reset();
-        //button.style = "display: none ";
-        status.style = "display: block";
-        status.innerHTML = "Dziękujemy za wypełnienie formularza";
+        formWycena.reset();
+        //buttonWycena.style = "display: none ";
+        statusWycena.style = "display: block";
+        statusWycena.innerHTML = "Dziękujemy za wypełnienie formularza. Zadzwonimy do Ciebie z informacją o wycenie."
     }
 
     function error() {
-        status.innerHTML = "Coś poszło nie tak!";
+        statusWycena.innerHTML = "Coś poszło nie tak!";
     }
 
     // handle the form submission event
 
-    form.addEventListener("submit", function (ev) {
+    formWycena.addEventListener("submit", function (ev) {
         ev.preventDefault();
-        var data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
+
+        const moc = document.getElementById("moc");
+        moc.addEventListener("input", function () {
+            if (moc.validity.typeMismatch) {
+                moc.setCustomValidity("I am expecting an e-mail address!");
+            } else {
+                moc.setCustomValidity("");
+            }
+        });
+        var data = new FormData(formWycena);
+        ajax(formWycena.method, formWycena.action, data, success, error);
     });
 });
 

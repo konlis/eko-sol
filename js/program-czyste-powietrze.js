@@ -26,13 +26,13 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*Folie form*/
-window.addEventListener("DOMContentLoaded", function () {
-
+/*Czyste powietrze form*/
+window.addEventListener("DOMContentLoaded", function (event) {
+    console.log("czyste powietrze", event)
     // get the form elements defined in your form HTML above
-    var form = document.getElementById("folie-contact");
+    var form = document.getElementById("powietrze-contact");
     //var button = document.getElementById("contact-button");
-    var status = document.getElementById("form-folie-contact");
+    var status = document.getElementById("form-powietrze-contact");
 
     // Success and Error functions for after the form is submitted
 
